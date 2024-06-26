@@ -7,6 +7,7 @@ import json
 import pyperclip
 import requests
 import sv_ttk  # Assuming sv_ttk provides set_theme() function
+import time
 
 # Clear the existing log file by opening it in 'w' mode
 with open('car_inventory.log', 'w'):
@@ -245,6 +246,7 @@ class InventoryPage(tk.Frame):
     def __init__(self, parent, controller):
         super().__init__(parent)
         self.controller = controller
+        self.notification_frame = NotificationFrame(self)
 
         # Create a Canvas widget to hold the scrollable area
         canvas = tk.Canvas(self)
@@ -315,8 +317,8 @@ class InventoryPage(tk.Frame):
     def copy_text(self, car):
         car_details = f"{car[2]} {car[3]} ({car[4]}) - {car[5]}"
         pyperclip.copy(car_details)
-        messagebox.showinfo("Copied", "Car details copied to clipboard!")
         logging.debug(f"Copied car details to clipboard: {car_details}")
+        self.notification_frame.add_notification("Car details copied to clipboard!")
 
     def archive_car(self, car):
         # Implement archive functionality here
@@ -335,13 +337,14 @@ class InventoryPage(tk.Frame):
             self.controller.delete_car(vin)
             logging.debug(f"Deleted car with VIN: {vin}")
             self.update_inventory_list()
-            messagebox.showinfo("Success", f"Car with VIN {vin} deleted successfully!")
+            self.notification_frame.add_notification(f"Car with VIN {vin} deleted successfully!")
 
 
 class ArchivePage(tk.Frame):
     def __init__(self, parent, controller):
         super().__init__(parent)
         self.controller = controller
+        self.notification_frame = NotificationFrame(self)
 
         # Create a Canvas widget to hold the scrollable area
         canvas = tk.Canvas(self)
@@ -394,7 +397,7 @@ class ArchivePage(tk.Frame):
     def copy_text(self, car):
         car_details = f"{car[2]} {car[3]} ({car[4]}) - {car[5]}"
         pyperclip.copy(car_details)
-        messagebox.showinfo("Copied", "Car details copied to clipboard!")
+        self.notification_frame.add_notification("Car details copied to clipboard!")
         logging.debug(f"Copied car details to clipboard: {car_details}")
 
 
@@ -639,6 +642,25 @@ class SettingsPage(tk.Frame):
         self.feature_input.delete(0, tk.END)
         logging.debug("Cleared feature input field")
 
+
+class NotificationFrame(tk.Frame):
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.configure(bg="lightgray", height=50)
+        self.pack(side=tk.BOTTOM, fill=tk.X)
+        self.notifications = []
+
+    def add_notification(self, message):
+        notification_label = ttk.Label(self, text=message, background="lightgreen", anchor="center", padding=(5, 2))
+        notification_label.pack(fill=tk.X)
+        self.notifications.append(notification_label)
+
+        # Automatically remove the notification after 3 seconds
+        self.after(3000, lambda: self.remove_notification(notification_label))
+
+    def remove_notification(self, notification_label):
+        notification_label.destroy()
+        self.notifications.remove(notification_label)
 
 if __name__ == "__main__":
     logging.debug("Starting Car Inventory application.")
