@@ -1,0 +1,36 @@
+{
+    "Safety": [
+        "ABS",
+        "Airbags",
+        "Lane Departure Warning",
+        "Blind Spot Monitoring",
+        "NEW TIRES"
+    ],
+    "Comfort": [
+        "Climate Control",
+        "Heated Seats",
+        "Ventilated Seats",
+        "Power Adjustable Seats",
+        "NEW TIRES",
+        "NEW TIRES",
+        "toooo"
+    ],
+    "Technology": [
+        "Navigation System",
+        "Bluetooth Connectivity",
+        "Apple CarPlay",
+        "Android Auto"
+    ],
+    "Exterior": [
+        "Panoramic Sunroof",
+        "LED Headlights",
+        "Fog Lights",
+        "Power Tailgate"
+    ],
+    "Interior": [
+        "Leather Upholstery",
+        "Wood Trim",
+        "Ambient Lighting",
+        "Premium Sound System"
+    ]
+}
