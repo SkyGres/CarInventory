@@ -7,6 +7,7 @@ import json
 import pyperclip
 import requests
 import sv_ttk  # Assuming sv_ttk provides set_theme() function
+import time
 
 # Clear the existing log file by opening it in 'w' mode
 with open('car_inventory.log', 'w'):
@@ -98,6 +99,8 @@ class CarInventoryApp(tk.Tk):
         # Hide all frames
         for frame in self.frames.values():
             frame.pack_forget()
+            if isinstance(frame, InventoryPage) or isinstance(frame, ArchivePage):
+                frame.unbind_mousewheel(frame.canvas)
 
         # Show the requested frame
         frame = self.frames[page_name]
@@ -106,6 +109,7 @@ class CarInventoryApp(tk.Tk):
         # Call the refresh method if the frame is InventoryPage or ArchivePage
         if page_name in ("InventoryPage", "ArchivePage"):
             frame.update_inventory_list()
+            frame.bind_mousewheel(frame.canvas)
 
     def init_db(self):
         logging.debug("Initializing database")
@@ -245,32 +249,41 @@ class InventoryPage(tk.Frame):
     def __init__(self, parent, controller):
         super().__init__(parent)
         self.controller = controller
+        self.notification_frame = NotificationFrame(self)
 
         # Create a Canvas widget to hold the scrollable area
-        canvas = tk.Canvas(self)
-        canvas.pack(side="left", fill="both", expand=True)
-        logging.debug("Canvas widget created")
+        self.canvas = tk.Canvas(self)
+        self.canvas.pack(side="left", fill="both", expand=True)
 
         # Add a scrollbar to the canvas
-        scrollbar = ttk.Scrollbar(self, orient="vertical", command=canvas.yview)
+        scrollbar = ttk.Scrollbar(self, orient="vertical", command=self.canvas.yview)
         scrollbar.pack(side="right", fill="y")
-        logging.debug("Scrollbar created")
 
         # Configure the canvas to use the scrollbar
-        canvas.configure(yscrollcommand=scrollbar.set)
-        logging.debug("Canvas configured to use scrollbar")
+        self.canvas.configure(yscrollcommand=scrollbar.set)
 
         # Create a frame inside the canvas to hold the inventory list
-        self.inventory_container = ttk.Frame(canvas)
-        self.inventory_container.pack(expand=True, fill="both")
-        logging.debug("Inventory container frame created")
+        self.inventory_container = ttk.Frame(self.canvas)
+        self.canvas.create_window((0, 0), window=self.inventory_container, anchor="nw")
 
-        # Bind the canvas to make it scrollable
-        canvas.create_window((0, 0), window=self.inventory_container, anchor="nw")
-        self.inventory_container.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
-        logging.debug("Canvas bound to inventory container frame")
+        # Bind the canvas to make it scrollable with mouse wheel
+        self.bind_mousewheel(self.canvas)
+
+        # Configure event for updating scroll region
+        self.inventory_container.bind("<Configure>",
+                                      lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all")))
 
         self.update_inventory_list()
+
+    def bind_mousewheel(self, widget):
+        widget.bind_all("<MouseWheel>", self.on_mousewheel)
+
+    def on_mousewheel(self, event):
+        # Perform vertical scrolling with mouse wheel
+        self.canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+
+    def unbind_mousewheel(self, widget):
+        self.unbind_all("<MouseWheel>")
 
     def update_inventory_list(self):
         # Clear the previous inventory list
@@ -315,8 +328,8 @@ class InventoryPage(tk.Frame):
     def copy_text(self, car):
         car_details = f"{car[2]} {car[3]} ({car[4]}) - {car[5]}"
         pyperclip.copy(car_details)
-        messagebox.showinfo("Copied", "Car details copied to clipboard!")
         logging.debug(f"Copied car details to clipboard: {car_details}")
+        self.notification_frame.add_notification("Car details copied to clipboard!")
 
     def archive_car(self, car):
         # Implement archive functionality here
@@ -335,43 +348,57 @@ class InventoryPage(tk.Frame):
             self.controller.delete_car(vin)
             logging.debug(f"Deleted car with VIN: {vin}")
             self.update_inventory_list()
-            messagebox.showinfo("Success", f"Car with VIN {vin} deleted successfully!")
+            self.notification_frame.add_notification(f"Car with VIN {vin} deleted successfully!")
 
 
 class ArchivePage(tk.Frame):
     def __init__(self, parent, controller):
         super().__init__(parent)
         self.controller = controller
+        self.notification_frame = NotificationFrame(self)
 
         # Create a Canvas widget to hold the scrollable area
-        canvas = tk.Canvas(self)
-        canvas.pack(side="left", fill="both", expand=True)
+        self.canvas = tk.Canvas(self)
+        self.canvas.pack(side="left", fill="both", expand=True)
 
         # Add a scrollbar to the canvas
-        scrollbar = ttk.Scrollbar(self, orient="vertical", command=canvas.yview)
+        scrollbar = ttk.Scrollbar(self, orient="vertical", command=self.canvas.yview)
         scrollbar.pack(side="right", fill="y")
 
         # Configure the canvas to use the scrollbar
-        canvas.configure(yscrollcommand=scrollbar.set)
+        self.canvas.configure(yscrollcommand=scrollbar.set)
 
-        # Create a frame inside the canvas to hold the inventory list
-        self.inventory_container = ttk.Frame(canvas)
-        self.inventory_container.pack(expand=True, fill="both")
+        # Create a frame inside the canvas to hold the archive list
+        self.archive_container = ttk.Frame(self.canvas)
+        self.canvas.create_window((0, 0), window=self.archive_container, anchor="nw")
 
-        # Bind the canvas to make it scrollable
-        canvas.create_window((0, 0), window=self.inventory_container, anchor="nw")
-        self.inventory_container.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+        # Bind the canvas to make it scrollable with mouse wheel
+        self.bind_mousewheel(self.canvas)
+
+        # Configure event for updating scroll region
+        self.archive_container.bind("<Configure>",
+                                    lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all")))
 
         self.update_inventory_list()
 
+    def bind_mousewheel(self, widget):
+        widget.bind_all("<MouseWheel>", self.on_mousewheel)
+
+    def on_mousewheel(self, event):
+        # Perform vertical scrolling with mouse wheel
+        self.canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+
+    def unbind_mousewheel(self, widget):
+        self.unbind_all("<MouseWheel>")
+
     def update_inventory_list(self):
         # Clear the previous inventory list
-        for widget in self.inventory_container.winfo_children():
+        for widget in self.archive_container.winfo_children():
             widget.destroy()
 
         cars = self.controller.fetch_archived_cars()
         for car in cars:
-            car_frame = ttk.Frame(self.inventory_container, borderwidth=2, relief="groove")
+            car_frame = ttk.Frame(self.archive_container, borderwidth=2, relief="groove")
             car_frame.pack(fill="x", padx=10, pady=5, expand=True)
 
             # Main clickable area representing the car
@@ -394,7 +421,7 @@ class ArchivePage(tk.Frame):
     def copy_text(self, car):
         car_details = f"{car[2]} {car[3]} ({car[4]}) - {car[5]}"
         pyperclip.copy(car_details)
-        messagebox.showinfo("Copied", "Car details copied to clipboard!")
+        self.notification_frame.add_notification("Car details copied to clipboard!")
         logging.debug(f"Copied car details to clipboard: {car_details}")
 
 
@@ -416,6 +443,8 @@ class AddCarPage(tk.Frame):
         self.vin_entry = ttk.Entry(self)
         self.vin_entry.pack()
         logging.debug("VIN entry field created")
+        # Bind the Enter key to trigger enter_vin method when the Entry widget has focus
+        self.vin_entry.bind("<Return>", lambda event: self.enter_vin())
 
         # Enter Button
         enter_button = ttk.Button(self, text="Enter", command=self.enter_vin)
@@ -426,6 +455,7 @@ class AddCarPage(tk.Frame):
         button = ttk.Button(self, text="Go to Home Page", command=lambda: controller.show_frame("HomePage"))
         button.pack(pady=20)
         logging.debug("Go to Home Page button created")
+
 
     def enter_vin(self):
         vin = self.vin_entry.get().upper()  # Convert VIN to uppercase for consistency
@@ -470,7 +500,6 @@ class AddCarPage(tk.Frame):
                 logging.debug(f"Model Year: {model_year}")
                 logging.debug(f"Series: {series}")
 
-                messagebox.showinfo("Success", "Car added successfully!")
                 # Show the CarOptionsPage with the VIN passed
                 self.controller.frames['CarOptionsPage'].set_vin(vin)
                 self.controller.show_frame("CarOptionsPage")
@@ -491,10 +520,6 @@ class CarOptionsPage(tk.Frame):
         self.controller = controller
 
         logging.debug("Initializing CarOptionsPage")
-
-        label = ttk.Label(self, text="Select Car Options", font=("Arial", 24))
-        label.pack(expand=True)
-        logging.debug("Car options label created")
 
         # Create a canvas widget and a vertical scrollbar
         self.canvas = tk.Canvas(self)
@@ -523,6 +548,13 @@ class CarOptionsPage(tk.Frame):
 
         # Configure canvas scrolling
         self.canvas.configure(yscrollcommand=scrollbar.set)
+        # Bind the canvas to make it scrollable with mouse wheel
+        self.bind_mousewheel(self.canvas)
+
+        # Create the label inside options_frame
+        label = ttk.Label(self.options_frame, text="Select Car Options", font=("Arial", 24))
+        label.pack(expand=True, pady=10, padx=10)
+        logging.debug("Car options label created")
 
         # Create checkboxes dynamically based on car options loaded from JSON
         self.checkboxes = {}
@@ -539,14 +571,25 @@ class CarOptionsPage(tk.Frame):
                 logging.debug(f"Created checkbox for option: {option}")
 
         # Enter Button
-        enter_button = ttk.Button(self, text="Enter", command=self.save_options)
+        enter_button = ttk.Button(self.options_frame, text="Enter", command=self.save_options)
         enter_button.pack(pady=20)
         logging.debug("Enter button created")
 
         # Button to go back to home page
-        button = ttk.Button(self, text="Go to Home Page", command=lambda: controller.show_frame("HomePage"))
+        button = ttk.Button(self.options_frame, text="Go to Home Page",
+                            command=lambda: controller.show_frame("HomePage"))
         button.pack(pady=20)
         logging.debug("Go to Home Page button created")
+
+    def bind_mousewheel(self, widget):
+        widget.bind_all("<MouseWheel>", self.on_mousewheel)
+
+    def on_mousewheel(self, event):
+        # Perform vertical scrolling with mouse wheel
+        self.canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+
+    def unbind_mousewheel(self, widget):
+        widget.unbind_all("<MouseWheel>")
 
     def set_vin(self, vin):
         self.vin = vin
@@ -638,6 +681,26 @@ class SettingsPage(tk.Frame):
         # Clear feature entry after saving
         self.feature_input.delete(0, tk.END)
         logging.debug("Cleared feature input field")
+
+
+class NotificationFrame(tk.Frame):
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.configure(bg="lightgray", height=50)
+        self.pack(side=tk.BOTTOM, fill=tk.X)
+        self.notifications = []
+
+    def add_notification(self, message):
+        notification_label = ttk.Label(self, text=message, background="lightgreen", anchor="center", padding=(5, 2))
+        notification_label.pack(fill=tk.X)
+        self.notifications.append(notification_label)
+
+        # Automatically remove the notification after 3 seconds
+        self.after(3000, lambda: self.remove_notification(notification_label))
+
+    def remove_notification(self, notification_label):
+        notification_label.destroy()
+        self.notifications.remove(notification_label)
 
 
 if __name__ == "__main__":

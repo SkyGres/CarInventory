@@ -1,171 +1,204 @@
-2024-06-26 08:39:32 - root - DEBUG - Starting Car Inventory application.
-2024-06-26 08:39:33 - root - DEBUG - Initializing CarInventoryApp
-2024-06-26 08:39:33 - root - DEBUG - Icon loaded successfully
-2024-06-26 08:39:33 - root - DEBUG - Initializing database
-2024-06-26 08:39:33 - root - DEBUG - Database initialized successfully
-2024-06-26 08:39:33 - root - DEBUG - Archive database initialized successfully
-2024-06-26 08:39:33 - root - DEBUG - Car options loaded successfully
-2024-06-26 08:39:33 - root - DEBUG - Logo is added successfully
-2024-06-26 08:39:33 - root - DEBUG - Home Page label created
-2024-06-26 08:39:33 - root - DEBUG - Add Car button created
-2024-06-26 08:39:33 - root - DEBUG - Frame HomePage initialized
-2024-06-26 08:39:33 - root - DEBUG - Canvas widget created
-2024-06-26 08:39:33 - root - DEBUG - Scrollbar created
-2024-06-26 08:39:33 - root - DEBUG - Canvas configured to use scrollbar
-2024-06-26 08:39:33 - root - DEBUG - Inventory container frame created
-2024-06-26 08:39:33 - root - DEBUG - Canvas bound to inventory container frame
-2024-06-26 08:39:33 - root - DEBUG - Previous inventory list cleared
-2024-06-26 08:39:33 - root - DEBUG - Created frame for car: (1, '1GKKVRKD8GJ182845', 'GMC', 'Acadia', '2016', 'SLT 1', '', '')
-2024-06-26 08:39:33 - root - DEBUG - Added main clickable area for car: (1, '1GKKVRKD8GJ182845', 'GMC', 'Acadia', '2016', 'SLT 1', '', '')
-2024-06-26 08:39:33 - root - DEBUG - Created frame for quick action buttons for car: (1, '1GKKVRKD8GJ182845', 'GMC', 'Acadia', '2016', 'SLT 1', '', '')
-2024-06-26 08:39:33 - root - DEBUG - Added Delete button for car: (1, '1GKKVRKD8GJ182845', 'GMC', 'Acadia', '2016', 'SLT 1', '', '')
-2024-06-26 08:39:33 - root - DEBUG - Created frame for car: (2, 'YV1612FS4E2271824', 'VOLVO', 'S60', '2014', '', '', '')
-2024-06-26 08:39:33 - root - DEBUG - Added main clickable area for car: (2, 'YV1612FS4E2271824', 'VOLVO', 'S60', '2014', '', '', '')
-2024-06-26 08:39:33 - root - DEBUG - Created frame for quick action buttons for car: (2, 'YV1612FS4E2271824', 'VOLVO', 'S60', '2014', '', '', '')
-2024-06-26 08:39:33 - root - DEBUG - Added Delete button for car: (2, 'YV1612FS4E2271824', 'VOLVO', 'S60', '2014', '', '', '')
-2024-06-26 08:39:33 - root - DEBUG - Frame InventoryPage initialized
-2024-06-26 08:39:33 - root - DEBUG - Add Car Page initialized
-2024-06-26 08:39:33 - root - DEBUG - VIN label created
-2024-06-26 08:39:33 - root - DEBUG - VIN entry field created
-2024-06-26 08:39:33 - root - DEBUG - Enter button created
-2024-06-26 08:39:33 - root - DEBUG - Go to Home Page button created
-2024-06-26 08:39:33 - root - DEBUG - Frame AddCarPage initialized
-2024-06-26 08:39:33 - root - DEBUG - Initializing SettingsPage
-2024-06-26 08:39:33 - root - DEBUG - Settings label created
-2024-06-26 08:39:33 - root - DEBUG - Loaded car_options.json successfully
-2024-06-26 08:39:33 - root - DEBUG - Category label created
-2024-06-26 08:39:33 - root - DEBUG - Category dropdown created
-2024-06-26 08:39:33 - root - DEBUG - Feature label created
-2024-06-26 08:39:33 - root - DEBUG - Feature input created
-2024-06-26 08:39:33 - root - DEBUG - Save button created
-2024-06-26 08:39:33 - root - DEBUG - Toggle theme button created
-2024-06-26 08:39:33 - root - DEBUG - Frame SettingsPage initialized
-2024-06-26 08:39:33 - root - DEBUG - Initializing CarOptionsPage
-2024-06-26 08:39:33 - root - DEBUG - Car options label created
-2024-06-26 08:39:33 - root - DEBUG - Created category frame for: Exterior
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: 5-SPEED MANUAL TRANSMISSION
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: 6-SPEED MANUAL TRANSMISSION
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: AWD
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: 4WD
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: TWIN TURBO
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: LED HEADLIGHTS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: HID HEADLIGHTS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: XENON HEADLIGHTS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: HEADLIGHT WASHERS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: FOG LIGHTS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: PARKING SENSORS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: FRONT AND REAR PARKING SENSORS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: TOW PACKAGE
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: RUNNING BOARDS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: LUGGAGE RACK
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: EXCELLENT TIRES
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: REAR SPOILER
-2024-06-26 08:39:33 - root - DEBUG - Created category frame for: Power
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER WINDOWS AND LOCKS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER WINDOWS, LOCKS AND MIRRORS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER WINDOWS, LOCKS AND SEAT
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER WINDOWS, LOCKS AND SEATS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER WINDOWS, LOCKS, SEAT AND MOONROOF
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER WINDOWS, LOCKS, SEATS AND MOONROOF
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER BACKSHADE
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER FOLDING MIRRORS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER TILT STEERING
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER ADJUSTABLE PEDAL
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER RUNNING BOARDS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER CONVERTIBLE TOP
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER GATE
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: POWER TRUNK
-2024-06-26 08:39:33 - root - DEBUG - Created category frame for: Truck
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: BEDLINER
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: 5 PASSENGER
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: 6 PASSENGER
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: 7 PASSENGER
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: 4 FULL SIZE DOORS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: 4 DOORS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: TONNEAU COVER
-2024-06-26 08:39:33 - root - DEBUG - Created category frame for: Interior
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: LEATHER INTERIOR
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: LEATHER WITH SUEDE INTERIOR
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: SUEDE INTERIOR
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: WOODEN TRIM
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: MASSAGE SEATS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: THIRD ROW SEATING
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: LEATHER SPORT SEATS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: COOLED SEATS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: MEMORY SEAT
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: MEMORY SEATS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: HEATED SEATS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: FRONT AND REAR HEATED SEATS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: HEATED STEERING WHEEL
-2024-06-26 08:39:33 - root - DEBUG - Created category frame for: Climate
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: CLIMATE CONTROL
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: DUAL CLIMATE
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: REAR CLIMATE
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: A/C
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: REAR A/C
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: COLD A/C
-2024-06-26 08:39:33 - root - DEBUG - Created category frame for: Technology
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: NAVIGATION SYSTEM
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: REVERSE CAMERA
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: 360-VIEW CAMERA
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: ANDROID AUTO
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: APPLE CARPLAY
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: HD RADIO W/ APPS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: HD RADIO W/ TOUCHSCREEN
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: HD RADIO W/ HDD
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: RADIO
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: TOUCHSCREEN RADIO
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: XM
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: AUX
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: USB
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: CD PLAYER
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: BLUETOOTH AUDIO
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: PUSH START
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: REMOTE START
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: KEYLESS GO
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: SECURITY SYSTEM
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: CRUISE CONTROL
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: ONSTAR
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: HEATED MIRRORS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: AUTO DIMMING MIRRORS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: HEADS UP DISPLAY
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: GARAGE OPENER
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: OWNER'S MANUAL
-2024-06-26 08:39:33 - root - DEBUG - Created category frame for: Entertainment
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: REAR DVD ENTERTAINMENT SYSTEM
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: REAR DVD ENTERTAINMENT SYSTEM W/ 2 SCREENS
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: BOSE SOUND SYSTEM
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: BURMESTER SOUND SYSTEM
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: HARMAN KARDON SOUND SYSTEM
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: MERIDIAN SOUND SYSTEM
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: BANG & OLUFSEN SOUND SYSTEM
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: LEXICON SOUND SYSTEM
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: ALPINE SOUND SYSTEM
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: PIONEER SOUND SYSTEM
-2024-06-26 08:39:33 - root - DEBUG - Created category frame for: Safety
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: BLIND SPOT MONITOR
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: BLIND SPOT CAMERA
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: LANE KEEP ASSIST
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: LANE DEPARTURE WARNING
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: INTELLIGENT CRUISE CONTROL
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: FRONT DISTANCE WARNING
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: FRONT COLLISION WARNING
-2024-06-26 08:39:33 - root - DEBUG - Created checkbox for option: FRONT COLLISION PREVENTION
-2024-06-26 08:39:33 - root - DEBUG - Enter button created
-2024-06-26 08:39:33 - root - DEBUG - Go to Home Page button created
-2024-06-26 08:39:33 - root - DEBUG - Frame CarOptionsPage initialized
-2024-06-26 08:39:33 - root - DEBUG - Frame ArchivePage initialized
-2024-06-26 08:39:35 - root - DEBUG - Previous inventory list cleared
-2024-06-26 08:39:35 - root - DEBUG - Created frame for car: (1, '1GKKVRKD8GJ182845', 'GMC', 'Acadia', '2016', 'SLT 1', '', '')
-2024-06-26 08:39:35 - root - DEBUG - Added main clickable area for car: (1, '1GKKVRKD8GJ182845', 'GMC', 'Acadia', '2016', 'SLT 1', '', '')
-2024-06-26 08:39:35 - root - DEBUG - Created frame for quick action buttons for car: (1, '1GKKVRKD8GJ182845', 'GMC', 'Acadia', '2016', 'SLT 1', '', '')
-2024-06-26 08:39:35 - root - DEBUG - Added Delete button for car: (1, '1GKKVRKD8GJ182845', 'GMC', 'Acadia', '2016', 'SLT 1', '', '')
-2024-06-26 08:39:35 - root - DEBUG - Created frame for car: (2, 'YV1612FS4E2271824', 'VOLVO', 'S60', '2014', '', '', '')
-2024-06-26 08:39:35 - root - DEBUG - Added main clickable area for car: (2, 'YV1612FS4E2271824', 'VOLVO', 'S60', '2014', '', '', '')
-2024-06-26 08:39:35 - root - DEBUG - Created frame for quick action buttons for car: (2, 'YV1612FS4E2271824', 'VOLVO', 'S60', '2014', '', '', '')
-2024-06-26 08:39:35 - root - DEBUG - Added Delete button for car: (2, 'YV1612FS4E2271824', 'VOLVO', 'S60', '2014', '', '', '')
-2024-06-26 08:39:40 - root - DEBUG - Application main loop running.
-2024-06-26 08:39:40 - root - DEBUG - Application closed.
+2024-06-26 09:57:16 - root - DEBUG - Starting Car Inventory application.
+2024-06-26 09:57:17 - root - DEBUG - Initializing CarInventoryApp
+2024-06-26 09:57:17 - root - DEBUG - Icon loaded successfully
+2024-06-26 09:57:17 - root - DEBUG - Initializing database
+2024-06-26 09:57:17 - root - DEBUG - Database initialized successfully
+2024-06-26 09:57:17 - root - DEBUG - Archive database initialized successfully
+2024-06-26 09:57:17 - root - DEBUG - Car options loaded successfully
+2024-06-26 09:57:17 - root - DEBUG - Logo is added successfully
+2024-06-26 09:57:17 - root - DEBUG - Home Page label created
+2024-06-26 09:57:17 - root - DEBUG - Add Car button created
+2024-06-26 09:57:17 - root - DEBUG - Frame HomePage initialized
+2024-06-26 09:57:17 - root - DEBUG - Previous inventory list cleared
+2024-06-26 09:57:17 - root - DEBUG - Created frame for car: (2, '5N1DL0MM0HC527497', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added main clickable area for car: (2, '5N1DL0MM0HC527497', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for quick action buttons for car: (2, '5N1DL0MM0HC527497', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added Delete button for car: (2, '5N1DL0MM0HC527497', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for car: (3, '5N1DL0MM0HC527496', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added main clickable area for car: (3, '5N1DL0MM0HC527496', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for quick action buttons for car: (3, '5N1DL0MM0HC527496', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added Delete button for car: (3, '5N1DL0MM0HC527496', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for car: (4, '5N1DL0MM0HC527495', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added main clickable area for car: (4, '5N1DL0MM0HC527495', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for quick action buttons for car: (4, '5N1DL0MM0HC527495', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added Delete button for car: (4, '5N1DL0MM0HC527495', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for car: (5, '5N1DL0MM0HC527494', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added main clickable area for car: (5, '5N1DL0MM0HC527494', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for quick action buttons for car: (5, '5N1DL0MM0HC527494', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added Delete button for car: (5, '5N1DL0MM0HC527494', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for car: (6, '5N1DL0MM0HC527491', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added main clickable area for car: (6, '5N1DL0MM0HC527491', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for quick action buttons for car: (6, '5N1DL0MM0HC527491', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added Delete button for car: (6, '5N1DL0MM0HC527491', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for car: (7, '5N1DL0MM0HC527492', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added main clickable area for car: (7, '5N1DL0MM0HC527492', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for quick action buttons for car: (7, '5N1DL0MM0HC527492', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added Delete button for car: (7, '5N1DL0MM0HC527492', 'INFINITI', 'QX60', '2017', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for car: (8, '1C4RJFBG5HC776040', 'JEEP', 'Grand Cherokee', '2017', 'WK', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added main clickable area for car: (8, '1C4RJFBG5HC776040', 'JEEP', 'Grand Cherokee', '2017', 'WK', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for quick action buttons for car: (8, '1C4RJFBG5HC776040', 'JEEP', 'Grand Cherokee', '2017', 'WK', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added Delete button for car: (8, '1C4RJFBG5HC776040', 'JEEP', 'Grand Cherokee', '2017', 'WK', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for car: (9, '1C4BJWDG5DL613963', 'JEEP', 'Wrangler', '2013', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added main clickable area for car: (9, '1C4BJWDG5DL613963', 'JEEP', 'Wrangler', '2013', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for quick action buttons for car: (9, '1C4BJWDG5DL613963', 'JEEP', 'Wrangler', '2013', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added Delete button for car: (9, '1C4BJWDG5DL613963', 'JEEP', 'Wrangler', '2013', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for car: (10, '1ZVBP8JS0C5240365', 'FORD', 'Mustang', '2012', 'Shelby Coupe', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added main clickable area for car: (10, '1ZVBP8JS0C5240365', 'FORD', 'Mustang', '2012', 'Shelby Coupe', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for quick action buttons for car: (10, '1ZVBP8JS0C5240365', 'FORD', 'Mustang', '2012', 'Shelby Coupe', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added Delete button for car: (10, '1ZVBP8JS0C5240365', 'FORD', 'Mustang', '2012', 'Shelby Coupe', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for car: (11, '1FATP8UH1G5331034', 'FORD', 'Mustang', '2016', 'I4 Convertible', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added main clickable area for car: (11, '1FATP8UH1G5331034', 'FORD', 'Mustang', '2016', 'I4 Convertible', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for quick action buttons for car: (11, '1FATP8UH1G5331034', 'FORD', 'Mustang', '2016', 'I4 Convertible', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added Delete button for car: (11, '1FATP8UH1G5331034', 'FORD', 'Mustang', '2016', 'I4 Convertible', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for car: (12, '\u0424\u042b\u0412123123123', '', '', '', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added main clickable area for car: (12, '\u0424\u042b\u0412123123123', '', '', '', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Created frame for quick action buttons for car: (12, '\u0424\u042b\u0412123123123', '', '', '', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Added Delete button for car: (12, '\u0424\u042b\u0412123123123', '', '', '', '', '', '')
+2024-06-26 09:57:17 - root - DEBUG - Frame InventoryPage initialized
+2024-06-26 09:57:17 - root - DEBUG - Add Car Page initialized
+2024-06-26 09:57:17 - root - DEBUG - VIN label created
+2024-06-26 09:57:17 - root - DEBUG - VIN entry field created
+2024-06-26 09:57:17 - root - DEBUG - Enter button created
+2024-06-26 09:57:17 - root - DEBUG - Go to Home Page button created
+2024-06-26 09:57:17 - root - DEBUG - Frame AddCarPage initialized
+2024-06-26 09:57:17 - root - DEBUG - Initializing SettingsPage
+2024-06-26 09:57:17 - root - DEBUG - Settings label created
+2024-06-26 09:57:17 - root - DEBUG - Loaded car_options.json successfully
+2024-06-26 09:57:17 - root - DEBUG - Category label created
+2024-06-26 09:57:17 - root - DEBUG - Category dropdown created
+2024-06-26 09:57:17 - root - DEBUG - Feature label created
+2024-06-26 09:57:17 - root - DEBUG - Feature input created
+2024-06-26 09:57:17 - root - DEBUG - Save button created
+2024-06-26 09:57:17 - root - DEBUG - Toggle theme button created
+2024-06-26 09:57:17 - root - DEBUG - Frame SettingsPage initialized
+2024-06-26 09:57:17 - root - DEBUG - Initializing CarOptionsPage
+2024-06-26 09:57:17 - root - DEBUG - Car options label created
+2024-06-26 09:57:17 - root - DEBUG - Created category frame for: Exterior
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: 5-SPEED MANUAL TRANSMISSION
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: 6-SPEED MANUAL TRANSMISSION
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: AWD
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: 4WD
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: TWIN TURBO
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: LED HEADLIGHTS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: HID HEADLIGHTS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: XENON HEADLIGHTS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: HEADLIGHT WASHERS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: FOG LIGHTS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: PARKING SENSORS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: FRONT AND REAR PARKING SENSORS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: TOW PACKAGE
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: RUNNING BOARDS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: LUGGAGE RACK
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: EXCELLENT TIRES
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: NEW TIRES
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: REAR SPOILER
+2024-06-26 09:57:17 - root - DEBUG - Created category frame for: Power
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER WINDOWS AND LOCKS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER WINDOWS, LOCKS AND MIRRORS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER WINDOWS, LOCKS AND SEAT
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER WINDOWS, LOCKS AND SEATS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER WINDOWS, LOCKS, SEAT AND MOONROOF
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER WINDOWS, LOCKS, SEATS AND MOONROOF
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER BACKSHADE
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER FOLDING MIRRORS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER TILT STEERING
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER ADJUSTABLE PEDAL
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER RUNNING BOARDS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER CONVERTIBLE TOP
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER GATE
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: POWER TRUNK
+2024-06-26 09:57:17 - root - DEBUG - Created category frame for: Truck
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: BEDLINER
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: 5 PASSENGER
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: 6 PASSENGER
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: 7 PASSENGER
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: 4 FULL SIZE DOORS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: 4 DOORS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: TONNEAU COVER
+2024-06-26 09:57:17 - root - DEBUG - Created category frame for: Interior
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: LEATHER INTERIOR
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: LEATHER WITH SUEDE INTERIOR
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: SUEDE INTERIOR
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: WOODEN TRIM
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: MASSAGE SEATS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: THIRD ROW SEATING
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: LEATHER SPORT SEATS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: COOLED SEATS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: MEMORY SEAT
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: MEMORY SEATS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: HEATED SEATS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: FRONT AND REAR HEATED SEATS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: HEATED STEERING WHEEL
+2024-06-26 09:57:17 - root - DEBUG - Created category frame for: Climate
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: CLIMATE CONTROL
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: DUAL CLIMATE
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: REAR CLIMATE
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: A/C
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: REAR A/C
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: COLD A/C
+2024-06-26 09:57:17 - root - DEBUG - Created category frame for: Technology
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: NAVIGATION SYSTEM
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: REVERSE CAMERA
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: 360-VIEW CAMERA
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: ANDROID AUTO
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: APPLE CARPLAY
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: HD RADIO W/ APPS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: HD RADIO W/ TOUCHSCREEN
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: HD RADIO W/ HDD
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: RADIO
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: TOUCHSCREEN RADIO
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: XM
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: AUX
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: USB
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: CD PLAYER
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: BLUETOOTH AUDIO
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: PUSH START
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: REMOTE START
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: KEYLESS GO
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: SECURITY SYSTEM
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: CRUISE CONTROL
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: ONSTAR
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: HEATED MIRRORS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: AUTO DIMMING MIRRORS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: HEADS UP DISPLAY
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: GARAGE OPENER
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: OWNER'S MANUAL
+2024-06-26 09:57:17 - root - DEBUG - Created category frame for: Entertainment
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: REAR DVD ENTERTAINMENT SYSTEM
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: REAR DVD ENTERTAINMENT SYSTEM W/ 2 SCREENS
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: BOSE SOUND SYSTEM
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: BURMESTER SOUND SYSTEM
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: HARMAN KARDON SOUND SYSTEM
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: MERIDIAN SOUND SYSTEM
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: BANG & OLUFSEN SOUND SYSTEM
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: LEXICON SOUND SYSTEM
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: ALPINE SOUND SYSTEM
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: PIONEER SOUND SYSTEM
+2024-06-26 09:57:17 - root - DEBUG - Created category frame for: Safety
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: BLIND SPOT MONITOR
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: BLIND SPOT CAMERA
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: LANE KEEP ASSIST
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: LANE DEPARTURE WARNING
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: INTELLIGENT CRUISE CONTROL
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: FRONT DISTANCE WARNING
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: FRONT COLLISION WARNING
+2024-06-26 09:57:17 - root - DEBUG - Created checkbox for option: FRONT COLLISION PREVENTION
+2024-06-26 09:57:17 - root - DEBUG - Enter button created
+2024-06-26 09:57:17 - root - DEBUG - Go to Home Page button created
+2024-06-26 09:57:17 - root - DEBUG - Frame CarOptionsPage initialized
+2024-06-26 09:57:17 - root - DEBUG - Frame ArchivePage initialized
+2024-06-26 09:57:23 - root - DEBUG - Entered VIN: 3CZRE4H53BG702032
+2024-06-26 09:57:23 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+2024-06-26 09:57:24 - urllib3.connectionpool - DEBUG - https://vpic.nhtsa.dot.gov:443 "POST /api/vehicles/DecodeVINValuesBatch/ HTTP/11" 200 2005
+2024-06-26 09:57:24 - root - DEBUG - API request sent to decode VIN
+2024-06-26 09:57:24 - root - DEBUG - Car with VIN 3CZRE4H53BG702032 inserted into inventory
+2024-06-26 09:57:24 - root - DEBUG - Car data inserted into the database
+2024-06-26 09:57:24 - root - DEBUG - Make: HONDA
+2024-06-26 09:57:24 - root - DEBUG - Model: CR-V
+2024-06-26 09:57:24 - root - DEBUG - Model Year: 2011
+2024-06-26 09:57:24 - root - DEBUG - Series: 
+2024-06-26 09:57:24 - root - DEBUG - VIN set to: 3CZRE4H53BG702032
+2024-06-26 09:57:26 - root - DEBUG - Application main loop running.
+2024-06-26 09:57:26 - root - DEBUG - Application closed.
