@@ -1,9 +1,7 @@
 import logging
 import tkinter as tk
 from tkinter import ttk, messagebox
-
 import pyperclip
-
 from notification_frame import NotificationFrame
 
 
@@ -59,9 +57,12 @@ class InventoryPage(tk.Frame):
             car_frame.pack(fill="x", padx=10, pady=5, expand=True)
             logging.debug(f"Created frame for car: {car}")
 
+            # Create formatted text for the button
+            button_text = f"{car[8]}\n{car[4]} {car[2]} {car[3]}"
+
             # Main clickable area representing the car
             car_button = ttk.Button(car_frame,
-                                    text=f"{car[2]} {car[3]} ({car[4]}) - {car[5]}",
+                                    text=button_text,
                                     command=lambda c=car: self.show_car_details(c))
             car_button.pack(side="left", fill="both", expand=True)
             logging.debug(f"Added main clickable area for car: {car}")
@@ -79,6 +80,7 @@ class InventoryPage(tk.Frame):
             archive_button = ttk.Button(action_frame, text="Archive", command=lambda c=car: self.archive_car(c))
             archive_button.pack(fill="x", pady=5)
 
+            # Delete button
             delete_button = ttk.Button(action_frame, text="Delete", command=lambda c=car: self.delete_car(c))
             delete_button.pack(fill="x", pady=5)
             logging.debug(f"Added Delete button for car: {car}")

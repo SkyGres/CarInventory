@@ -6,35 +6,24 @@ import requests
 
 
 class AddCarPage(tk.Frame):
-    def __init__(self, parent, controller):
-        super().__init__(parent)
+    def __init__(self, parent, controller, *args, **kwargs):
+        super().__init__(parent, *args, **kwargs)
         self.controller = controller
 
-        # Centered Label
-        label = ttk.Label(self, text="Add Car Page", font=("Arial", 24))
-        label.pack(expand=True)
-        logging.debug("Add Car Page initialized")
-
         # VIN Entry
-        vin_label = ttk.Label(self, text="Enter VIN:")
-        vin_label.pack(pady=10)
-        logging.debug("VIN label created")
-
         self.vin_entry = ttk.Entry(self)
-        self.vin_entry.pack()
-        logging.debug("VIN entry field created")
-        # Bind the Enter key to trigger enter_vin method when the Entry widget has focus
-        self.vin_entry.bind("<Return>", lambda event: self.enter_vin())
+        self.vin_entry.grid(row=0, column=1, padx=10, pady=10)
 
-        # Enter Button
-        enter_button = ttk.Button(self, text="Enter", command=self.enter_vin)
-        enter_button.pack(pady=20)
-        logging.debug("Enter button created")
+        # VIN Label
+        ttk.Label(self, text="Enter VIN:").grid(row=0, column=0, padx=10, pady=10)
 
-        # Button to go back to home page
-        button = ttk.Button(self, text="Go to Home Page", command=lambda: controller.show_frame("HomePage"))
-        button.pack(pady=20)
-        logging.debug("Go to Home Page button created")
+        # Enter VIN Button
+        ttk.Button(self, text="Enter", command=self.enter_vin).grid(row=0, column=2, padx=10, pady=10)
+
+        # Bind return key (Enter key) to enter_vin method
+        self.vin_entry.bind('<Return>', lambda event: self.enter_vin())
+
+        # Other initialization code...
 
     def enter_vin(self):
         vin = self.vin_entry.get().upper()  # Convert VIN to uppercase for consistency
@@ -85,8 +74,7 @@ class AddCarPage(tk.Frame):
 
                 messagebox.showinfo("Success", "Car added successfully!")
                 # Show the CarOptionsPage with the VIN passed
-                self.controller.frames['CarOptionsPage'].set_vin(vin)
-                self.controller.show_frame("CarOptionsPage")
+                self.controller.show_frame("CarOptionsPage", vin=vin)
 
             except ValueError as e:
                 messagebox.showerror("Error", str(e))

@@ -11,6 +11,7 @@ from car_options_page import CarOptionsPage
 from archive_page import ArchivePage
 import sv_ttk  # Assuming sv_ttk provides set_theme() function
 
+
 class CarInventoryApp(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -28,7 +29,7 @@ class CarInventoryApp(tk.Tk):
 
         logging.debug("Initializing CarInventoryApp")
         self.title("Car Inventory Management")
-        self.minsize(1000, 600)  # Set a minimum size of 800x600 pixels
+        self.minsize(1050, 600)  # Set a minimum size of 800x600 pixels
 
         # Set window icon
         try:
@@ -63,11 +64,15 @@ class CarInventoryApp(tk.Tk):
         self.main_content.pack(side="right", fill="both", expand=True)
 
         self.frames = {}
-        for F in (HomePage, InventoryPage, AddCarPage, SettingsPage, CarOptionsPage, ArchivePage):
+        for F in (HomePage, InventoryPage, AddCarPage, SettingsPage, ArchivePage):
             page_name = F.__name__
             frame = F(parent=self.main_content, controller=self)
             self.frames[page_name] = frame
             logging.debug(f"Frame {page_name} initialized")
+
+        # Special handling for CarOptionsPage
+        self.frames["CarOptionsPage"] = CarOptionsPage(parent=self.main_content, controller=self, vin=None)
+        logging.debug("Frame CarOptionsPage initialized")
 
         self.add_sidebar_buttons()
         self.show_frame("HomePage")
@@ -85,7 +90,7 @@ class CarInventoryApp(tk.Tk):
         settings_button = ttk.Button(self.sidebar, text="Settings", command=lambda: self.show_frame("SettingsPage"))
         settings_button.pack(fill="x", pady=10)
 
-    def show_frame(self, page_name):
+    def show_frame(self, page_name, **kwargs):
         # Hide all frames
         for frame in self.frames.values():
             frame.pack_forget()
@@ -93,6 +98,9 @@ class CarInventoryApp(tk.Tk):
                 frame.unbind_mousewheel(frame.canvas)
 
         # Show the requested frame
+        if page_name == "CarOptionsPage":
+            self.frames["CarOptionsPage"] = CarOptionsPage(parent=self.main_content, controller=self, **kwargs)
+
         frame = self.frames[page_name]
         frame.pack(fill="both", expand=True)
 
@@ -162,6 +170,18 @@ class CarInventoryApp(tk.Tk):
             logging.debug(f"Updated options for car with VIN {vin}")
         except sqlite3.Error as e:
             raise ValueError(f"Failed to update car options: {e}")
+
+    def update_car_details(self, vin, make, model, series):
+        try:
+            self.cursor.execute('''
+                   UPDATE inventory
+                   SET make = ?, model = ?, series = ?
+                   WHERE vin = ?
+               ''', (make, model, series, vin))
+            self.conn.commit()
+            logging.debug(f"Updated details for car with VIN {vin}")
+        except sqlite3.Error as e:
+            raise ValueError(f"Failed to update car details: {e}")
 
     def fetch_cars(self):
         self.cursor.execute('SELECT * FROM inventory')
