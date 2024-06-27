@@ -1,5 +1,4 @@
 import logging
-import tkinter as tk
 from car_inventory_app import CarInventoryApp
 
 # Clear the existing log file by opening it in 'w' mode
