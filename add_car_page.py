@@ -72,7 +72,6 @@ class AddCarPage(tk.Frame):
                 logging.debug(f"Model Year: {model_year}")
                 logging.debug(f"Series: {series}")
 
-                messagebox.showinfo("Success", "Car added successfully!")
                 # Show the CarOptionsPage with the VIN passed
                 self.controller.show_frame("CarOptionsPage", vin=vin)
 

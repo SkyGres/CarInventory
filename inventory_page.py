@@ -54,22 +54,22 @@ class InventoryPage(tk.Frame):
         cars = self.controller.fetch_cars()
         for car in cars:
             car_frame = ttk.Frame(self.inventory_container, borderwidth=2, relief="groove")
-            car_frame.pack(fill="x", padx=10, pady=5, expand=True)
+            car_frame.pack(fill="x", padx=10, pady=5)
             logging.debug(f"Created frame for car: {car}")
 
             # Create formatted text for the button
             button_text = f"{car[8]}\n{car[4]} {car[2]} {car[3]}"
 
             # Main clickable area representing the car
-            car_button = ttk.Button(car_frame,
-                                    text=button_text,
-                                    command=lambda c=car: self.show_car_details(c))
-            car_button.pack(side="left", fill="both", expand=True)
+            car_button = tk.Button(car_frame, text=button_text, command=lambda c=car: self.show_car_details(c),
+                                   bg="#f0f0f0", fg="black", font=("Arial", 12), relief="raised", bd=2)
+            car_button.pack(side="left", fill="x", expand=True, padx=10, pady=5)
+            car_button.config(width=50, height=5)  # Set fixed width and height for the button
             logging.debug(f"Added main clickable area for car: {car}")
 
             # Frame for quick action buttons
             action_frame = ttk.Frame(car_frame)
-            action_frame.pack(side="right", fill="y")
+            action_frame.pack(side="right", fill="y", padx=10, pady=5)
             logging.debug(f"Created frame for quick action buttons for car: {car}")
 
             # Copy Text button
@@ -113,3 +113,4 @@ class InventoryPage(tk.Frame):
             logging.debug(f"Deleted car with VIN: {vin}")
             self.update_inventory_list()
             self.notification_frame.add_notification(f"Car with VIN {vin} deleted successfully!")
+
