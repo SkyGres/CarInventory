@@ -77,7 +77,7 @@ class CarOptionsPage(tk.Frame):
         if current_details:
             self.make_entry.insert(0, current_details[2])
             self.model_entry.insert(0, current_details[3])
-            self.series_entry.insert(0, current_details[4])
+            self.series_entry.insert(0, current_details[5])
         else:
             messagebox.showerror("Error", f"Car with VIN {self.vin} not found.")
 

@@ -1,361 +1,56 @@
-2024-06-25 19:57:49 - root - DEBUG - Starting Car Inventory application.
-2024-06-25 19:57:49 - root - DEBUG - Initializing CarInventoryApp
-2024-06-25 19:57:49 - root - DEBUG - Icon loaded successfully
-2024-06-25 19:57:49 - root - DEBUG - Initializing database
-2024-06-25 19:57:49 - root - DEBUG - Database initialized successfully
-2024-06-25 19:57:49 - root - DEBUG - Car options loaded successfully
-2024-06-25 19:57:49 - root - ERROR - An error occurred while running the application.
-Traceback (most recent call last):
-  File "main.py", line 459, in <module>
-  File "main.py", line 43, in __init__
-  File "sv_ttk\__init__.py", line 30, in set_theme
-  File "sv_ttk\__init__.py", line 16, in _load_theme
-_tkinter.TclError: couldn't read file "C:\Users\Leo\AppData\Local\Temp\_MEI2782882\sv_ttk\sv.tcl": no such file or directory
-2024-06-25 19:57:49 - root - DEBUG - Application closed.
-2024-06-25 20:01:40 - root - DEBUG - Starting Car Inventory application.
-2024-06-25 20:01:40 - root - DEBUG - Initializing CarInventoryApp
-2024-06-25 20:01:40 - root - DEBUG - Icon loaded successfully
-2024-06-25 20:01:40 - root - DEBUG - Initializing database
-2024-06-25 20:01:40 - root - DEBUG - Database initialized successfully
-2024-06-25 20:01:40 - root - DEBUG - Car options loaded successfully
-2024-06-25 20:01:40 - root - DEBUG - Logo file 'logo.png' not found. Please check the file path.
-2024-06-25 20:01:40 - root - DEBUG - Home Page label created
-2024-06-25 20:01:40 - root - DEBUG - Add Car button created
-2024-06-25 20:01:40 - root - DEBUG - Frame HomePage initialized
-2024-06-25 20:01:40 - root - DEBUG - Canvas widget created
-2024-06-25 20:01:40 - root - DEBUG - Scrollbar created
-2024-06-25 20:01:40 - root - DEBUG - Canvas configured to use scrollbar
-2024-06-25 20:01:40 - root - DEBUG - Inventory container frame created
-2024-06-25 20:01:40 - root - DEBUG - Canvas bound to inventory container frame
-2024-06-25 20:01:40 - root - DEBUG - Previous inventory list cleared
-2024-06-25 20:01:40 - root - DEBUG - Frame InventoryPage initialized
-2024-06-25 20:01:40 - root - DEBUG - Add Car Page initialized
-2024-06-25 20:01:40 - root - DEBUG - VIN label created
-2024-06-25 20:01:40 - root - DEBUG - VIN entry field created
-2024-06-25 20:01:40 - root - DEBUG - Enter button created
-2024-06-25 20:01:40 - root - DEBUG - Go to Home Page button created
-2024-06-25 20:01:40 - root - DEBUG - Frame AddCarPage initialized
-2024-06-25 20:01:40 - root - DEBUG - Initializing SettingsPage
-2024-06-25 20:01:40 - root - DEBUG - Settings label created
-2024-06-25 20:01:40 - root - DEBUG - Loaded car_options.json successfully
-2024-06-25 20:01:40 - root - DEBUG - Category label created
-2024-06-25 20:01:40 - root - DEBUG - Category dropdown created
-2024-06-25 20:01:40 - root - DEBUG - Feature label created
-2024-06-25 20:01:40 - root - DEBUG - Feature input created
-2024-06-25 20:01:40 - root - DEBUG - Save button created
-2024-06-25 20:01:40 - root - DEBUG - Toggle theme button created
-2024-06-25 20:01:40 - root - DEBUG - Frame SettingsPage initialized
-2024-06-25 20:01:40 - root - DEBUG - Initializing CarOptionsPage
-2024-06-25 20:01:40 - root - DEBUG - Car options label created
-2024-06-25 20:01:40 - root - DEBUG - Created category frame for: Safety
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: ABS
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Airbags
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Lane Departure Warning
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Blind Spot Monitoring
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-25 20:01:40 - root - DEBUG - Created category frame for: Comfort
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Climate Control
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Heated Seats
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Ventilated Seats
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Power Adjustable Seats
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: toooo
-2024-06-25 20:01:40 - root - DEBUG - Created category frame for: Technology
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Navigation System
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Bluetooth Connectivity
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Apple CarPlay
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Android Auto
-2024-06-25 20:01:40 - root - DEBUG - Created category frame for: Exterior
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Panoramic Sunroof
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: LED Headlights
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Fog Lights
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Power Tailgate
-2024-06-25 20:01:40 - root - DEBUG - Created category frame for: Interior
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Leather Upholstery
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Wood Trim
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Ambient Lighting
-2024-06-25 20:01:40 - root - DEBUG - Created checkbox for option: Premium Sound System
-2024-06-25 20:01:40 - root - DEBUG - Enter button created
-2024-06-25 20:01:40 - root - DEBUG - Go to Home Page button created
-2024-06-25 20:01:40 - root - DEBUG - Frame CarOptionsPage initialized
-2024-06-25 20:01:47 - root - DEBUG - Previous inventory list cleared
-2024-06-25 20:01:51 - root - DEBUG - Previous inventory list cleared
-2024-06-25 20:01:55 - root - DEBUG - Application main loop running.
-2024-06-25 20:01:55 - root - DEBUG - Application closed.
-2024-06-25 20:06:04 - root - DEBUG - Starting Car Inventory application.
-2024-06-25 20:06:04 - root - DEBUG - Initializing CarInventoryApp
-2024-06-25 20:06:04 - root - DEBUG - Icon loaded successfully
-2024-06-25 20:06:04 - root - DEBUG - Initializing database
-2024-06-25 20:06:04 - root - DEBUG - Database initialized successfully
-2024-06-25 20:06:04 - root - DEBUG - Car options loaded successfully
-2024-06-25 20:06:04 - root - DEBUG - Logo file 'logo.png' not found. Please check the file path.
-2024-06-25 20:06:04 - root - DEBUG - Home Page label created
-2024-06-25 20:06:04 - root - DEBUG - Add Car button created
-2024-06-25 20:06:04 - root - DEBUG - Frame HomePage initialized
-2024-06-25 20:06:04 - root - DEBUG - Canvas widget created
-2024-06-25 20:06:04 - root - DEBUG - Scrollbar created
-2024-06-25 20:06:04 - root - DEBUG - Canvas configured to use scrollbar
-2024-06-25 20:06:04 - root - DEBUG - Inventory container frame created
-2024-06-25 20:06:04 - root - DEBUG - Starting Car Inventory application.
-rame
-2024-06-25 20:06:04 - root - DEBUG - Previous inventory list cleared
-2024-06-25 20:06:04 - root - DEBUG - Frame InventoryPage initialized
-2024-06-25 20:06:04 - root - DEBUG - Add Car Page initialized
-2024-06-25 20:06:04 - root - DEBUG - VIN label created
-2024-06-25 20:06:04 - root - DEBUG - VIN entry field created
-2024-06-25 20:06:04 - root - DEBUG - Enter button created
-2024-06-25 20:06:04 - root - DEBUG - Go to Home Page button created
-2024-06-25 20:06:04 - root - DEBUG - Frame AddCarPage initialized
-2024-06-25 20:06:04 - root - DEBUG - Initializing SettingsPage
-2024-06-25 20:06:04 - root - DEBUG - Settings label created
-2024-06-25 20:06:04 - root - DEBUG - Loaded car_options.json successfully
-2024-06-25 20:06:04 - root - DEBUG - Category label created
-2024-06-25 20:06:04 - root - DEBUG - Category dropdown created
-2024-06-25 20:06:04 - root - DEBUG - Feature label created
-2024-06-25 20:06:04 - root - DEBUG - Feature input created
-2024-06-25 20:06:04 - root - DEBUG - Save button created
-2024-06-25 20:06:04 - root - DEBUG - Toggle theme button created
-2024-06-25 20:06:04 - root - DEBUG - Frame SettingsPage initialized
-2024-06-25 20:06:04 - root - DEBUG - Initializing CarOptionsPage
-2024-06-25 20:06:04 - root - DEBUG - Car options label created
-2024-06-25 20:06:04 - root - DEBUG - Created category frame for: Safety
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: ABS
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Airbags
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Lane Departure Warning
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Blind Spot Monitoring
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-25 20:06:04 - root - DEBUG - Created category frame for: Comfort
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Climate Control
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Heated Seats
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Ventilated Seats
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Power Adjustable Seats
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: toooo
-2024-06-25 20:06:04 - root - DEBUG - Created category frame for: Technology
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Navigation System
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Bluetooth Connectivity
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Apple CarPlay
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Android Auto
-2024-06-25 20:06:04 - root - DEBUG - Created category frame for: Exterior
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Panoramic Sunroof
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: LED Headlights
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Fog Lights
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Power Tailgate
-2024-06-25 20:06:04 - root - DEBUG - Created category frame for: Interior
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Leather Upholstery
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Wood Trim
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Ambient Lighting
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Premium Sound System
-2024-06-25 20:06:04 - root - DEBUG - Enter button created
-2024-06-25 20:06:04 - root - DEBUG - Go to Home Page button created
-2024-06-25 20:06:04 - root - DEBUG - Frame CarOptionsPage initialized
-2024-06-25 20:06:04 - root - DEBUG - Initializing CarInventoryApp
-2024-06-25 20:06:04 - root - DEBUG - Icon loaded successfully
-2024-06-25 20:06:04 - root - DEBUG - Initializing database
-2024-06-25 20:06:04 - root - DEBUG - Database initialized successfully
-2024-06-25 20:06:04 - root - DEBUG - Car options loaded successfully
-2024-06-25 20:06:04 - root - DEBUG - Logo file 'logo.png' not found. Please check the file path.
-2024-06-25 20:06:04 - root - DEBUG - Home Page label created
-2024-06-25 20:06:04 - root - DEBUG - Add Car button created
-2024-06-25 20:06:04 - root - DEBUG - Frame HomePage initialized
-2024-06-25 20:06:04 - root - DEBUG - Canvas widget created
-2024-06-25 20:06:04 - root - DEBUG - Scrollbar created
-2024-06-25 20:06:04 - root - DEBUG - Canvas configured to use scrollbar
-2024-06-25 20:06:04 - root - DEBUG - Inventory container frame created
-2024-06-25 20:06:04 - root - DEBUG - Canvas bound to inventory container frame
-2024-06-25 20:06:04 - root - DEBUG - Previous inventory list cleared
-2024-06-25 20:06:04 - root - DEBUG - Frame InventoryPage initialized
-2024-06-25 20:06:04 - root - DEBUG - Add Car Page initialized
-2024-06-25 20:06:04 - root - DEBUG - VIN label created
-2024-06-25 20:06:04 - root - DEBUG - VIN entry field created
-2024-06-25 20:06:04 - root - DEBUG - Enter button created
-2024-06-25 20:06:04 - root - DEBUG - Go to Home Page button created
-2024-06-25 20:06:04 - root - DEBUG - Frame AddCarPage initialized
-2024-06-25 20:06:04 - root - DEBUG - Initializing SettingsPage
-2024-06-25 20:06:04 - root - DEBUG - Settings label created
-2024-06-25 20:06:04 - root - DEBUG - Loaded car_options.json successfully
-2024-06-25 20:06:04 - root - DEBUG - Category label created
-2024-06-25 20:06:04 - root - DEBUG - Category dropdown created
-2024-06-25 20:06:04 - root - DEBUG - Feature label created
-2024-06-25 20:06:04 - root - DEBUG - Feature input created
-2024-06-25 20:06:04 - root - DEBUG - Save button created
-2024-06-25 20:06:04 - root - DEBUG - Toggle theme button created
-2024-06-25 20:06:04 - root - DEBUG - Frame SettingsPage initialized
-2024-06-25 20:06:04 - root - DEBUG - Initializing CarOptionsPage
-2024-06-25 20:06:04 - root - DEBUG - Car options label created
-2024-06-25 20:06:04 - root - DEBUG - Created category frame for: Safety
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: ABS
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Airbags
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Lane Departure Warning
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Blind Spot Monitoring
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-25 20:06:04 - root - DEBUG - Created category frame for: Comfort
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Climate Control
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Heated Seats
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Ventilated Seats
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Power Adjustable Seats
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: toooo
-2024-06-25 20:06:04 - root - DEBUG - Created category frame for: Technology
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Navigation System
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Bluetooth Connectivity
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Apple CarPlay
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Android Auto
-2024-06-25 20:06:04 - root - DEBUG - Created category frame for: Exterior
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Panoramic Sunroof
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: LED Headlights
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Fog Lights
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Power Tailgate
-2024-06-25 20:06:04 - root - DEBUG - Created category frame for: Interior
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Leather Upholstery
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Wood Trim
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Ambient Lighting
-2024-06-25 20:06:04 - root - DEBUG - Created checkbox for option: Premium Sound System
-2024-06-25 20:06:04 - root - DEBUG - Enter button created
-2024-06-25 20:06:04 - root - DEBUG - Go to Home Page button created
-2024-06-25 20:06:04 - root - DEBUG - Frame CarOptionsPage initialized
-2024-06-25 20:06:09 - root - DEBUG - Application main loop running.
-2024-06-25 20:06:09 - root - DEBUG - Application closed.
-2024-06-25 20:06:14 - root - DEBUG - Starting Car Inventory application.
-2024-06-25 20:06:14 - root - DEBUG - Initializing CarInventoryApp
-2024-06-25 20:06:14 - root - DEBUG - Icon loaded successfully
-2024-06-25 20:06:14 - root - DEBUG - Initializing database
-2024-06-25 20:06:14 - root - DEBUG - Database initialized successfully
-2024-06-25 20:06:14 - root - DEBUG - Car options loaded successfully
-2024-06-25 20:06:14 - root - DEBUG - Logo file 'logo.png' not found. Please check the file path.
-2024-06-25 20:06:14 - root - DEBUG - Home Page label created
-2024-06-25 20:06:14 - root - DEBUG - Add Car button created
-2024-06-25 20:06:14 - root - DEBUG - Frame HomePage initialized
-2024-06-25 20:06:14 - root - DEBUG - Canvas widget created
-2024-06-25 20:06:14 - root - DEBUG - Scrollbar created
-2024-06-25 20:06:14 - root - DEBUG - Canvas configured to use scrollbar
-2024-06-25 20:06:14 - root - DEBUG - Inventory container frame created
-2024-06-25 20:06:14 - root - DEBUG - Canvas bound to inventory container frame
-2024-06-25 20:06:14 - root - DEBUG - Previous inventory list cleared
-2024-06-25 20:06:14 - root - DEBUG - Frame InventoryPage initialized
-2024-06-25 20:06:14 - root - DEBUG - Add Car Page initialized
-2024-06-25 20:06:14 - root - DEBUG - VIN label created
-2024-06-25 20:06:14 - root - DEBUG - VIN entry field created
-2024-06-25 20:06:14 - root - DEBUG - Enter button created
-2024-06-25 20:06:14 - root - DEBUG - Go to Home Page button created
-2024-06-25 20:06:14 - root - DEBUG - Frame AddCarPage initialized
-2024-06-25 20:06:14 - root - DEBUG - Initializing SettingsPage
-2024-06-25 20:06:14 - root - DEBUG - Settings label created
-2024-06-25 20:06:14 - root - DEBUG - Loaded car_options.json successfully
-2024-06-25 20:06:14 - root - DEBUG - Category label created
-2024-06-25 20:06:14 - root - DEBUG - Category dropdown created
-2024-06-25 20:06:14 - root - DEBUG - Feature label created
-2024-06-25 20:06:14 - root - DEBUG - Feature input created
-2024-06-25 20:06:14 - root - DEBUG - Save button created
-2024-06-25 20:06:14 - root - DEBUG - Toggle theme button created
-2024-06-25 20:06:14 - root - DEBUG - Frame SettingsPage initialized
-2024-06-25 20:06:14 - root - DEBUG - Initializing CarOptionsPage
-2024-06-25 20:06:14 - root - DEBUG - Car options label created
-2024-06-25 20:06:14 - root - DEBUG - Created category frame for: Safety
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: ABS
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Airbags
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Lane Departure Warning
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Blind Spot Monitoring
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-25 20:06:14 - root - DEBUG - Created category frame for: Comfort
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Climate Control
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Heated Seats
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Ventilated Seats
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Power Adjustable Seats
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: toooo
-2024-06-25 20:06:14 - root - DEBUG - Created category frame for: Technology
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Navigation System
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Bluetooth Connectivity
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Apple CarPlay
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Android Auto
-2024-06-25 20:06:14 - root - DEBUG - Created category frame for: Exterior
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Panoramic Sunroof
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: LED Headlights
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Fog Lights
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Power Tailgate
-2024-06-25 20:06:14 - root - DEBUG - Created category frame for: Interior
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Leather Upholstery
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Wood Trim
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Ambient Lighting
-2024-06-25 20:06:14 - root - DEBUG - Created checkbox for option: Premium Sound System
-2024-06-25 20:06:14 - root - DEBUG - Enter button created
-2024-06-25 20:06:14 - root - DEBUG - Go to Home Page button created
-2024-06-25 20:06:14 - root - DEBUG - Frame CarOptionsPage initialized
-2024-06-25 20:06:20 - root - DEBUG - Previous inventory list cleared
-2024-06-25 20:08:05 - root - DEBUG - Starting Car Inventory application.
-2024-06-25 20:08:05 - root - DEBUG - Initializing CarInventoryApp
-2024-06-25 20:08:05 - root - DEBUG - Icon loaded successfully
-2024-06-25 20:08:05 - root - DEBUG - Initializing database
-2024-06-25 20:08:05 - root - DEBUG - Database initialized successfully
-2024-06-25 20:08:05 - root - DEBUG - Car options loaded successfully
-2024-06-25 20:08:05 - root - DEBUG - Logo file 'logo.png' not found. Please check the file path.
-2024-06-25 20:08:05 - root - DEBUG - Home Page label created
-2024-06-25 20:08:05 - root - DEBUG - Add Car button created
-2024-06-25 20:08:05 - root - DEBUG - Frame HomePage initialized
-2024-06-25 20:08:05 - root - DEBUG - Canvas widget created
-2024-06-25 20:08:05 - root - DEBUG - Scrollbar created
-2024-06-25 20:08:05 - root - DEBUG - Canvas configured to use scrollbar
-2024-06-25 20:08:05 - root - DEBUG - Inventory container frame created
-2024-06-25 20:08:05 - root - DEBUG - Canvas bound to inventory container frame
-2024-06-25 20:08:05 - root - DEBUG - Previous inventory list cleared
-2024-06-25 20:08:05 - root - DEBUG - Frame InventoryPage initialized
-2024-06-25 20:08:05 - root - DEBUG - Add Car Page initialized
-2024-06-25 20:08:05 - root - DEBUG - VIN label created
-2024-06-25 20:08:05 - root - DEBUG - VIN entry field created
-2024-06-25 20:08:05 - root - DEBUG - Enter button created
-2024-06-25 20:08:05 - root - DEBUG - Go to Home Page button created
-2024-06-25 20:08:05 - root - DEBUG - Frame AddCarPage initialized
-2024-06-25 20:08:05 - root - DEBUG - Initializing SettingsPage
-2024-06-25 20:08:05 - root - DEBUG - Settings label created
-2024-06-25 20:08:05 - root - DEBUG - Loaded car_options.json successfully
-2024-06-25 20:08:05 - root - DEBUG - Category label created
-2024-06-25 20:08:05 - root - DEBUG - Category dropdown created
-2024-06-25 20:08:05 - root - DEBUG - Feature label created
-2024-06-25 20:08:05 - root - DEBUG - Feature input created
-2024-06-25 20:08:05 - root - DEBUG - Save button created
-2024-06-25 20:08:05 - root - DEBUG - Toggle theme button created
-2024-06-25 20:08:05 - root - DEBUG - Frame SettingsPage initialized
-2024-06-25 20:08:05 - root - DEBUG - Initializing CarOptionsPage
-2024-06-25 20:08:05 - root - DEBUG - Car options label created
-2024-06-25 20:08:05 - root - DEBUG - Created category frame for: Safety
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: ABS
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Airbags
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Lane Departure Warning
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Blind Spot Monitoring
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-25 20:08:05 - root - DEBUG - Created category frame for: Comfort
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Climate Control
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Heated Seats
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Ventilated Seats
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Power Adjustable Seats
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: NEW TIRES
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: toooo
-2024-06-25 20:08:05 - root - DEBUG - Created category frame for: Technology
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Navigation System
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Bluetooth Connectivity
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Apple CarPlay
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Android Auto
-2024-06-25 20:08:05 - root - DEBUG - Created category frame for: Exterior
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Panoramic Sunroof
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: LED Headlights
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Fog Lights
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Power Tailgate
-2024-06-25 20:08:05 - root - DEBUG - Created category frame for: Interior
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Leather Upholstery
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Wood Trim
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Ambient Lighting
-2024-06-25 20:08:05 - root - DEBUG - Created checkbox for option: Premium Sound System
-2024-06-25 20:08:05 - root - DEBUG - Enter button created
-2024-06-25 20:08:05 - root - DEBUG - Go to Home Page button created
-2024-06-25 20:08:05 - root - DEBUG - Frame CarOptionsPage initialized
-2024-06-25 20:08:10 - root - DEBUG - Previous inventory list cleared
-2024-06-25 20:08:21 - root - DEBUG - Previous inventory list cleared
-2024-06-25 20:08:24 - root - DEBUG - Previous inventory list cleared
-2024-06-25 20:08:28 - root - DEBUG - Application main loop running.
-2024-06-25 20:08:28 - root - DEBUG - Application closed.
+2024-06-27 09:41:46 - root - DEBUG - Starting Car Inventory application.
+2024-06-27 09:41:46 - root - DEBUG - Initializing CarInventoryApp
+2024-06-27 09:41:46 - root - DEBUG - Icon loaded successfully
+2024-06-27 09:41:46 - root - DEBUG - Initializing database
+2024-06-27 09:41:46 - root - DEBUG - Database initialized successfully
+2024-06-27 09:41:46 - root - DEBUG - Archive database initialized successfully
+2024-06-27 09:41:46 - root - DEBUG - Car options loaded successfully
+2024-06-27 09:41:46 - root - DEBUG - Logo is added successfully
+2024-06-27 09:41:46 - root - DEBUG - Home Page label created
+2024-06-27 09:41:46 - root - DEBUG - Add Car button created
+2024-06-27 09:41:46 - root - DEBUG - Frame HomePage initialized
+2024-06-27 09:41:46 - root - DEBUG - Previous inventory list cleared
+2024-06-27 09:41:46 - root - DEBUG - Created frame for car: (1, '3CZRE4H53BG702032', 'HONDA', 'CR-V', '2011', '', '', '', '2032')
+2024-06-27 09:41:46 - root - DEBUG - Added main clickable area for car: (1, '3CZRE4H53BG702032', 'HONDA', 'CR-V', '2011', '', '', '', '2032')
+2024-06-27 09:41:46 - root - DEBUG - Created frame for quick action buttons for car: (1, '3CZRE4H53BG702032', 'HONDA', 'CR-V', '2011', '', '', '', '2032')
+2024-06-27 09:41:46 - root - DEBUG - Added Delete button for car: (1, '3CZRE4H53BG702032', 'HONDA', 'CR-V', '2011', '', '', '', '2032')
+2024-06-27 09:41:46 - root - DEBUG - Frame InventoryPage initialized
+2024-06-27 09:41:46 - root - DEBUG - Frame AddCarPage initialized
+2024-06-27 09:41:46 - root - DEBUG - Initializing SettingsPage
+2024-06-27 09:41:46 - root - DEBUG - Settings label created
+2024-06-27 09:41:46 - root - DEBUG - Loaded car_options.json successfully
+2024-06-27 09:41:46 - root - DEBUG - Category label created
+2024-06-27 09:41:46 - root - DEBUG - Category dropdown created
+2024-06-27 09:41:46 - root - DEBUG - Feature label created
+2024-06-27 09:41:46 - root - DEBUG - Feature input created
+2024-06-27 09:41:46 - root - DEBUG - Save button created
+2024-06-27 09:41:46 - root - DEBUG - Toggle theme button created
+2024-06-27 09:41:46 - root - DEBUG - Frame SettingsPage initialized
+2024-06-27 09:41:46 - root - DEBUG - Frame ArchivePage initialized
+2024-06-27 09:41:46 - root - DEBUG - Frame CarOptionsPage initialized
+2024-06-27 09:42:06 - root - DEBUG - Entered VIN: WAWAUGGAFC6DN045452
+2024-06-27 09:42:08 - root - DEBUG - Invalid VIN length detected
+2024-06-27 09:42:12 - root - DEBUG - Entered VIN: WAUGGAFC6DN045452
+2024-06-27 09:42:12 - root - DEBUG - Calculated stock number: 5452
+2024-06-27 09:42:12 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+2024-06-27 09:42:12 - urllib3.connectionpool - DEBUG - https://vpic.nhtsa.dot.gov:443 "POST /api/vehicles/DecodeVINValuesBatch/ HTTP/11" 200 2004
+2024-06-27 09:42:12 - root - DEBUG - API request sent to decode VIN
+2024-06-27 09:42:12 - root - DEBUG - Inserted car with VIN: WAUGGAFC6DN045452
+2024-06-27 09:42:12 - root - DEBUG - Car data inserted into the database
+2024-06-27 09:42:12 - root - DEBUG - Make: AUDI
+2024-06-27 09:42:12 - root - DEBUG - Model: A6
+2024-06-27 09:42:12 - root - DEBUG - Model Year: 2013
+2024-06-27 09:42:12 - root - DEBUG - Series: Premium Plus Quattro
+2024-06-27 09:42:17 - root - DEBUG - Updated options for car with VIN WAUGGAFC6DN045452
+2024-06-27 09:42:19 - root - DEBUG - Previous inventory list cleared
+2024-06-27 09:42:19 - root - DEBUG - Created frame for car: (1, '3CZRE4H53BG702032', 'HONDA', 'CR-V', '2011', '', '', '', '2032')
+2024-06-27 09:42:19 - root - DEBUG - Added main clickable area for car: (1, '3CZRE4H53BG702032', 'HONDA', 'CR-V', '2011', '', '', '', '2032')
+2024-06-27 09:42:19 - root - DEBUG - Created frame for quick action buttons for car: (1, '3CZRE4H53BG702032', 'HONDA', 'CR-V', '2011', '', '', '', '2032')
+2024-06-27 09:42:19 - root - DEBUG - Added Delete button for car: (1, '3CZRE4H53BG702032', 'HONDA', 'CR-V', '2011', '', '', '', '2032')
+2024-06-27 09:42:19 - root - DEBUG - Created frame for car: (2, 'WAUGGAFC6DN045452', 'AUDI', 'A6', '2013', 'Premium Plus Quattro', 'BLIND SPOT CAMERA', '', '5452')
+2024-06-27 09:42:19 - root - DEBUG - Added main clickable area for car: (2, 'WAUGGAFC6DN045452', 'AUDI', 'A6', '2013', 'Premium Plus Quattro', 'BLIND SPOT CAMERA', '', '5452')
+2024-06-27 09:42:19 - root - DEBUG - Created frame for quick action buttons for car: (2, 'WAUGGAFC6DN045452', 'AUDI', 'A6', '2013', 'Premium Plus Quattro', 'BLIND SPOT CAMERA', '', '5452')
+2024-06-27 09:42:19 - root - DEBUG - Added Delete button for car: (2, 'WAUGGAFC6DN045452', 'AUDI', 'A6', '2013', 'Premium Plus Quattro', 'BLIND SPOT CAMERA', '', '5452')
+2024-06-27 09:42:22 - root - DEBUG - Copied car details to clipboard: AUDI A6 (2013) - Premium Plus Quattro
+2024-06-27 09:42:31 - root - DEBUG - Application main loop running.
+2024-06-27 09:42:31 - root - DEBUG - Application closed.
