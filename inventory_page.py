@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 import pyperclip
 from notification_frame import NotificationFrame
+from car_details_page import CarDetailsPage
 
 
 class InventoryPage(tk.Frame):
@@ -76,6 +77,10 @@ class InventoryPage(tk.Frame):
             copy_button = ttk.Button(action_frame, text="Copy Text", command=lambda c=car: self.copy_text(c))
             copy_button.pack(fill="x", pady=5)
 
+            # Copy VIN button
+            vin_button = ttk.Button(action_frame, text="Copy VIN", command=lambda c=car: self.copy_vin(c))
+            vin_button.pack(fill="x", pady=5)
+
             # Archive button
             archive_button = ttk.Button(action_frame, text="Archive", command=lambda c=car: self.archive_car(c))
             archive_button.pack(fill="x", pady=5)
@@ -86,14 +91,39 @@ class InventoryPage(tk.Frame):
             logging.debug(f"Added Delete button for car: {car}")
 
     def show_car_details(self, car):
-        self.controller.show_car_details(car)
-        logging.debug(f"Showing details for car: {car}")
+        # Assuming `car` is a tuple and VIN is the second element in the tuple
+        vin = car[1]
+        try:
+            car_details = self.controller.fetch_car_by_vin(vin)
+            if car_details:
+                # Assuming you have a method to update or show details in CarDetailsPage
+                if "CarDetailsPage" in self.controller.frames:
+                    self.controller.frames["CarDetailsPage"].update_details(car_details)
+                else:
+                    # If CarDetailsPage doesn't exist, create it and add it to frames
+                    details_page = CarDetailsPage(parent=self.controller.main_content, controller=self.controller,
+                                                  car_details=car_details)
+                    self.controller.frames["CarDetailsPage"] = details_page
+                self.controller.show_frame("CarDetailsPage")
+            else:
+                logging.error(f"No car found with VIN: {vin}")
+                messagebox.showerror("Error", f"No car details found for VIN: {vin}")
+        except Exception as e:
+            logging.error(f"An error occurred while fetching details for VIN {vin}: {e}")
+            messagebox.showerror("Error", f"An error occurred: {str(e)}")
 
     def copy_text(self, car):
         car_details = f"{car[2]} {car[3]} ({car[4]}) - {car[5]}"
         pyperclip.copy(car_details)
         logging.debug(f"Copied car details to clipboard: {car_details}")
-        self.notification_frame.add_notification("Car details copied to clipboard!")
+        self.notification_frame.add_notification("Car details copied to clipboard!") \
+
+
+    def copy_vin(self, car):
+        car_details = car[1]
+        pyperclip.copy(car_details)
+        logging.debug(f"Copied car VIN details to clipboard: {car_details}")
+        self.notification_frame.add_notification("Car VIN copied to clipboard!")
 
     def archive_car(self, car):
         # Implement archive functionality here
@@ -113,4 +143,3 @@ class InventoryPage(tk.Frame):
             logging.debug(f"Deleted car with VIN: {vin}")
             self.update_inventory_list()
             self.notification_frame.add_notification(f"Car with VIN {vin} deleted successfully!")
-

@@ -7,8 +7,8 @@ from home_page import HomePage
 from inventory_page import InventoryPage
 from add_car_page import AddCarPage
 from settings_page import SettingsPage
-from car_options_page import CarOptionsPage
 from archive_page import ArchivePage
+from car_details_page import CarDetailsPage
 import sv_ttk  # Assuming sv_ttk provides set_theme() function
 
 
@@ -17,7 +17,7 @@ class CarInventoryApp(tk.Tk):
         super().__init__()
 
         # Initialize main database connection and cursor
-        self.conn = sqlite3.connect('car_inventory.db')
+        self.conn = sqlite3.connect('car_inventory.db', check_same_thread=False)
         self.cursor = self.conn.cursor()
 
         # Initialize archive database connection and cursor
@@ -70,10 +70,6 @@ class CarInventoryApp(tk.Tk):
             self.frames[page_name] = frame
             logging.debug(f"Frame {page_name} initialized")
 
-        # Special handling for CarOptionsPage
-        self.frames["CarOptionsPage"] = CarOptionsPage(parent=self.main_content, controller=self, vin=None)
-        logging.debug("Frame CarOptionsPage initialized")
-
         self.add_sidebar_buttons()
         self.show_frame("HomePage")
 
@@ -91,23 +87,67 @@ class CarInventoryApp(tk.Tk):
         settings_button.pack(fill="x", pady=10)
 
     def show_frame(self, page_name, **kwargs):
+        logging.debug(f"show_frame called with page_name={page_name} and kwargs={kwargs}")
+
         # Hide all frames
         for frame in self.frames.values():
             frame.pack_forget()
             if isinstance(frame, InventoryPage) or isinstance(frame, ArchivePage):
                 frame.unbind_mousewheel(frame.canvas)
 
-        # Show the requested frame
-        if page_name == "CarOptionsPage":
-            self.frames["CarOptionsPage"] = CarOptionsPage(parent=self.main_content, controller=self, **kwargs)
+        # Dynamically create or update the requested frame
+        if page_name not in self.frames or 'vin' in kwargs:
+            # Check if the frame needs to be created or updated with new details
+            if page_name == "CarDetailsPage":
+                frame = CarDetailsPage(parent=self.main_content, controller=self, **kwargs)
+            else:
+                frame = self.frames.get(page_name, None)
+                if frame is None:
+                    # Create other pages normally if not already created
+                    frame = self.create_page(page_name)  # You should define create_page method or add specific conditions
 
-        frame = self.frames[page_name]
+            # Store the new or updated frame
+            self.frames[page_name] = frame
+        else:
+            frame = self.frames[page_name]
+
+        # Pack and show the requested frame
         frame.pack(fill="both", expand=True)
 
-        # Call the refresh method if the frame is InventoryPage or ArchivePage
+        # Optionally call a refresh method if applicable, like for inventory or archive pages
         if page_name in ("InventoryPage", "ArchivePage"):
             frame.update_inventory_list()
             frame.bind_mousewheel(frame.canvas)
+
+    def create_page(self, page_name):
+        """
+        Dynamically creates a page based on the page_name provided.
+        """
+        # Import frame classes at the top of your file to avoid circular imports
+        from home_page import HomePage
+        from inventory_page import InventoryPage
+        from add_car_page import AddCarPage
+        from settings_page import SettingsPage
+        from archive_page import ArchivePage
+        from car_details_page import CarDetailsPage
+
+        # Dictionary mapping page names to class constructors
+        pages = {
+            "HomePage": HomePage,
+            "InventoryPage": InventoryPage,
+            "AddCarPage": AddCarPage,
+            "SettingsPage": SettingsPage,
+            "ArchivePage": ArchivePage,
+            "CarDetailsPage": CarDetailsPage
+        }
+
+        # Get the class from the dictionary and instantiate it
+        page_class = pages.get(page_name)
+        if page_class:
+            return page_class(parent=self.main_content, controller=self)
+        else:
+            logging.error(f"No page found for {page_name}")
+            raise ValueError(f"No page found for {page_name}")
 
     def init_db(self):
         logging.debug("Initializing database")
@@ -171,17 +211,19 @@ class CarInventoryApp(tk.Tk):
         except sqlite3.Error as e:
             raise ValueError(f"Failed to update car options: {e}")
 
-    def update_car_details(self, vin, make, model, series):
+    def update_car_details(self, vin, **details):
+        query = "UPDATE inventory SET "
+        query += ", ".join(f"{key} = ?" for key in details.keys())
+        query += " WHERE vin = ?"
+        params = list(details.values()) + [vin]
         try:
-            self.cursor.execute('''
-                   UPDATE inventory
-                   SET make = ?, model = ?, series = ?
-                   WHERE vin = ?
-               ''', (make, model, series, vin))
+            logging.debug(f"Executing SQL query: {query} with params {params}")
+            self.cursor.execute(query, params)
             self.conn.commit()
-            logging.debug(f"Updated details for car with VIN {vin}")
+            logging.debug("Car details updated successfully")
         except sqlite3.Error as e:
-            raise ValueError(f"Failed to update car details: {e}")
+            logging.error(f"Failed to update car details: {e}")
+            raise ValueError(f"Failed to update: {e}")
 
     def fetch_cars(self):
         self.cursor.execute('SELECT * FROM inventory')
@@ -225,6 +267,8 @@ class CarInventoryApp(tk.Tk):
         try:
             self.cursor.execute("SELECT * FROM inventory WHERE vin = ?", (vin,))
             car = self.cursor.fetchone()
+            logging.debug(f"Fetched car details for VIN {vin}: {car}")
             return car
         except sqlite3.Error as e:
             logging.error(f"Error fetching car with VIN {vin}: {e}")
+            return None

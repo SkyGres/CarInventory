@@ -1,9 +1,7 @@
 import logging
 import tkinter as tk
 from tkinter import ttk, messagebox
-
 import requests
-
 
 class AddCarPage(tk.Frame):
     def __init__(self, parent, controller, *args, **kwargs):
@@ -23,8 +21,6 @@ class AddCarPage(tk.Frame):
         # Bind return key (Enter key) to enter_vin method
         self.vin_entry.bind('<Return>', lambda event: self.enter_vin())
 
-        # Other initialization code...
-
     def enter_vin(self):
         vin = self.vin_entry.get().upper()  # Convert VIN to uppercase for consistency
         logging.debug(f"Entered VIN: {vin}")
@@ -37,48 +33,42 @@ class AddCarPage(tk.Frame):
 
         # Check if the VIN exceeds 17 characters
         if len(vin) > 17 or len(vin) < 11:
-            messagebox.showerror("Error", "VIN cannot be less than 11 or exceed 17 characters.")
+            messagebox.showerror("Error", "VIN must be between 11 and 17 characters.")
             logging.debug("Invalid VIN length detected")
             return
 
-        # Calculate the stock number as the last 4 characters of the VIN
-        stock_number = vin[-4:]
-        logging.debug(f"Calculated stock number: {stock_number}")
+        # Start the process to fetch VIN details and update inventory
+        self.fetch_vin_details(vin)
 
+    def fetch_vin_details(self, vin):
         url = 'https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVINValuesBatch/'
         post_fields = {'format': 'json', 'data': vin}
-        r = requests.post(url, data=post_fields)
+        response = requests.post(url, data=post_fields)
         logging.debug("API request sent to decode VIN")
+        self.process_vin_response(response.json(), vin)
 
-        # Parse the JSON response
-        response_data = r.json()
-
-        # Extract specific fields
+    def process_vin_response(self, response_data, vin):
         if response_data["Count"] > 0:
             result = response_data["Results"][0]
-            make = result.get("Make", "N/A")
-            model = result.get("Model", "N/A")
+            make = result.get("Make", "N/A").upper()
+            model = result.get("Model", "N/A").upper()
             model_year = result.get("ModelYear", "N/A")
-            series = result.get("Series", "N/A")
+            series = result.get("Series", "N/A").upper()
 
-            # Insert car data into the database
+            # Default values for options and key features
+            options = " "
+            key_features = " "
+            stock_number = vin[-4:]  # Last 4 digits of VIN
+
             try:
-                self.controller.insert_car(vin, make, model, model_year, series, "", "", stock_number)
+                # Insert car data into the database and update the inventory page
+                self.controller.insert_car(vin, make, model, model_year, series, options, key_features, stock_number)
                 logging.debug("Car data inserted into the database")
-
-                # Print the extracted fields
-                logging.debug(f"Make: {make}")
-                logging.debug(f"Model: {model}")
-                logging.debug(f"Model Year: {model_year}")
-                logging.debug(f"Series: {series}")
-
-                # Show the CarOptionsPage with the VIN passed
-                self.controller.show_frame("CarOptionsPage", vin=vin)
-
-            except ValueError as e:
+                self.controller.frames['InventoryPage'].update_inventory_list()
+                self.controller.show_frame("InventoryPage")
+            except Exception as e:
                 messagebox.showerror("Error", str(e))
                 logging.error(f"Error inserting car data: {e}")
-
         else:
             messagebox.showerror("Error", "No results found for the entered VIN.")
             logging.debug("No results found for the entered VIN")
