@@ -1,268 +1,79 @@
-2024-06-30 08:28:40 - root - DEBUG - Starting Car Inventory application.
-2024-06-30 08:28:40 - root - DEBUG - Initializing CarInventoryApp
-2024-06-30 08:28:40 - root - DEBUG - Icon loaded successfully
-2024-06-30 08:28:40 - root - DEBUG - Initializing database
-2024-06-30 08:28:40 - root - DEBUG - Database initialized successfully
-2024-06-30 08:28:40 - root - DEBUG - Archive database initialized successfully
-2024-06-30 08:28:40 - root - DEBUG - Car options loaded successfully
-2024-06-30 08:28:40 - root - DEBUG - Logo is added successfully
-2024-06-30 08:28:40 - root - DEBUG - Home Page label created
-2024-06-30 08:28:40 - root - DEBUG - Add Car button created
-2024-06-30 08:28:40 - root - DEBUG - Frame HomePage initialized
-2024-06-30 08:28:40 - root - DEBUG - Previous inventory list cleared
-2024-06-30 08:28:40 - root - DEBUG - Created frame for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:28:40 - root - DEBUG - Added main clickable area for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for quick action buttons for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:28:40 - root - DEBUG - Added Delete button for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:28:40 - root - DEBUG - Added main clickable area for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for quick action buttons for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:28:40 - root - DEBUG - Added Delete button for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:28:40 - root - DEBUG - Added main clickable area for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for quick action buttons for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:28:40 - root - DEBUG - Added Delete button for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:28:40 - root - DEBUG - Added main clickable area for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for quick action buttons for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:28:40 - root - DEBUG - Added Delete button for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:28:40 - root - DEBUG - Added main clickable area for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for quick action buttons for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:28:40 - root - DEBUG - Added Delete button for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:28:40 - root - DEBUG - Added main clickable area for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for quick action buttons for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:28:40 - root - DEBUG - Added Delete button for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:28:40 - root - DEBUG - Added main clickable area for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for quick action buttons for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:28:40 - root - DEBUG - Added Delete button for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:28:40 - root - DEBUG - Added main clickable area for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for quick action buttons for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:28:40 - root - DEBUG - Added Delete button for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:28:40 - root - DEBUG - Added main clickable area for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for quick action buttons for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:28:40 - root - DEBUG - Added Delete button for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:28:40 - root - DEBUG - Added main clickable area for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for quick action buttons for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:28:40 - root - DEBUG - Added Delete button for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:28:40 - root - DEBUG - Added main clickable area for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for quick action buttons for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:28:40 - root - DEBUG - Added Delete button for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:28:40 - root - DEBUG - Added main clickable area for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for quick action buttons for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:28:40 - root - DEBUG - Added Delete button for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:28:40 - root - DEBUG - Added main clickable area for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for quick action buttons for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:28:40 - root - DEBUG - Added Delete button for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:28:40 - root - DEBUG - Added main clickable area for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:28:40 - root - DEBUG - Created frame for quick action buttons for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:28:40 - root - DEBUG - Added Delete button for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:28:40 - root - DEBUG - Frame InventoryPage initialized
-2024-06-30 08:28:40 - root - DEBUG - Frame AddCarPage initialized
-2024-06-30 08:28:40 - root - DEBUG - Initializing SettingsPage
-2024-06-30 08:28:40 - root - DEBUG - Settings label created
-2024-06-30 08:28:40 - root - DEBUG - Loaded car_options.json successfully
-2024-06-30 08:28:40 - root - DEBUG - Category label created
-2024-06-30 08:28:40 - root - DEBUG - Category dropdown created
-2024-06-30 08:28:40 - root - DEBUG - Feature label created
-2024-06-30 08:28:40 - root - DEBUG - Feature input created
-2024-06-30 08:28:40 - root - DEBUG - Save button created
-2024-06-30 08:28:40 - root - DEBUG - Toggle theme button created
-2024-06-30 08:28:40 - root - DEBUG - Frame SettingsPage initialized
-2024-06-30 08:28:40 - root - DEBUG - Frame ArchivePage initialized
-2024-06-30 08:28:40 - root - DEBUG - show_frame called with page_name=HomePage and kwargs={}
-2024-06-30 08:28:42 - root - DEBUG - show_frame called with page_name=InventoryPage and kwargs={}
-2024-06-30 08:28:42 - root - DEBUG - Previous inventory list cleared
-2024-06-30 08:28:42 - root - DEBUG - Created frame for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:28:42 - root - DEBUG - Added main clickable area for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for quick action buttons for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:28:42 - root - DEBUG - Added Delete button for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:28:42 - root - DEBUG - Added main clickable area for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for quick action buttons for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:28:42 - root - DEBUG - Added Delete button for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:28:42 - root - DEBUG - Added main clickable area for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for quick action buttons for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:28:42 - root - DEBUG - Added Delete button for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:28:42 - root - DEBUG - Added main clickable area for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for quick action buttons for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:28:42 - root - DEBUG - Added Delete button for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:28:42 - root - DEBUG - Added main clickable area for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for quick action buttons for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:28:42 - root - DEBUG - Added Delete button for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:28:42 - root - DEBUG - Added main clickable area for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for quick action buttons for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:28:42 - root - DEBUG - Added Delete button for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:28:42 - root - DEBUG - Added main clickable area for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for quick action buttons for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:28:42 - root - DEBUG - Added Delete button for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:28:42 - root - DEBUG - Added main clickable area for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for quick action buttons for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:28:42 - root - DEBUG - Added Delete button for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:28:42 - root - DEBUG - Added main clickable area for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for quick action buttons for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:28:42 - root - DEBUG - Added Delete button for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:28:42 - root - DEBUG - Added main clickable area for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for quick action buttons for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:28:42 - root - DEBUG - Added Delete button for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:28:42 - root - DEBUG - Added main clickable area for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for quick action buttons for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:28:42 - root - DEBUG - Added Delete button for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:28:42 - root - DEBUG - Added main clickable area for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for quick action buttons for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:28:42 - root - DEBUG - Added Delete button for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:28:42 - root - DEBUG - Added main clickable area for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for quick action buttons for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:28:42 - root - DEBUG - Added Delete button for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:28:42 - root - DEBUG - Added main clickable area for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:28:42 - root - DEBUG - Created frame for quick action buttons for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:28:42 - root - DEBUG - Added Delete button for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:28:55 - root - DEBUG - Fetched car details for VIN WAUGGAFC6DN045452: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:28:55 - root - DEBUG - show_frame called with page_name=CarDetailsPage and kwargs={}
-2024-06-30 08:29:10 - root - DEBUG - Executing SQL query: UPDATE inventory SET make = ?, model = ?, model_year = ?, series = ?, options = ?, key_features = ? WHERE vin = ? with params ['CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels, 17" TWO-TONE WHEELS', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', 'WAUGGAFC6DN045452']
-2024-06-30 08:29:10 - root - DEBUG - Car details updated successfully
-2024-06-30 08:29:11 - root - DEBUG - show_frame called with page_name=InventoryPage and kwargs={}
-2024-06-30 08:29:11 - root - DEBUG - Previous inventory list cleared
-2024-06-30 08:29:11 - root - DEBUG - Created frame for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels, 17" TWO-TONE WHEELS', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:29:11 - root - DEBUG - Added main clickable area for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels, 17" TWO-TONE WHEELS', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for quick action buttons for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels, 17" TWO-TONE WHEELS', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:29:11 - root - DEBUG - Added Delete button for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels, 17" TWO-TONE WHEELS', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:29:11 - root - DEBUG - Added main clickable area for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for quick action buttons for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:29:11 - root - DEBUG - Added Delete button for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:29:11 - root - DEBUG - Added main clickable area for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for quick action buttons for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:29:11 - root - DEBUG - Added Delete button for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:29:11 - root - DEBUG - Added main clickable area for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for quick action buttons for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:29:11 - root - DEBUG - Added Delete button for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:29:11 - root - DEBUG - Added main clickable area for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for quick action buttons for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:29:11 - root - DEBUG - Added Delete button for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:29:11 - root - DEBUG - Added main clickable area for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for quick action buttons for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:29:11 - root - DEBUG - Added Delete button for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:29:11 - root - DEBUG - Added main clickable area for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for quick action buttons for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:29:11 - root - DEBUG - Added Delete button for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:29:11 - root - DEBUG - Added main clickable area for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for quick action buttons for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:29:11 - root - DEBUG - Added Delete button for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:29:11 - root - DEBUG - Added main clickable area for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for quick action buttons for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:29:11 - root - DEBUG - Added Delete button for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:29:11 - root - DEBUG - Added main clickable area for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for quick action buttons for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:29:11 - root - DEBUG - Added Delete button for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:29:11 - root - DEBUG - Added main clickable area for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for quick action buttons for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:29:11 - root - DEBUG - Added Delete button for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:29:11 - root - DEBUG - Added main clickable area for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for quick action buttons for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:29:11 - root - DEBUG - Added Delete button for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:29:11 - root - DEBUG - Added main clickable area for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for quick action buttons for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:29:11 - root - DEBUG - Added Delete button for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:29:11 - root - DEBUG - Added main clickable area for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:29:11 - root - DEBUG - Created frame for quick action buttons for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:29:11 - root - DEBUG - Added Delete button for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:29:12 - root - DEBUG - Fetched car details for VIN WAUGGAFC6DN045452: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels, 17" TWO-TONE WHEELS', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:29:12 - root - DEBUG - show_frame called with page_name=CarDetailsPage and kwargs={}
-2024-06-30 08:30:10 - root - DEBUG - Executing SQL query: UPDATE inventory SET make = ?, model = ?, model_year = ?, series = ?, options = ?, key_features = ? WHERE vin = ? with params ['CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels, 17" TWO-TONE WHEELS, 17" TWO-TONE WHEELS', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', 'WAUGGAFC6DN045452']
-2024-06-30 08:30:10 - root - DEBUG - Car details updated successfully
-2024-06-30 08:30:11 - root - DEBUG - show_frame called with page_name=InventoryPage and kwargs={}
-2024-06-30 08:30:11 - root - DEBUG - Previous inventory list cleared
-2024-06-30 08:30:11 - root - DEBUG - Created frame for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels, 17" TWO-TONE WHEELS, 17" TWO-TONE WHEELS', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:30:11 - root - DEBUG - Added main clickable area for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels, 17" TWO-TONE WHEELS, 17" TWO-TONE WHEELS', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for quick action buttons for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels, 17" TWO-TONE WHEELS, 17" TWO-TONE WHEELS', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:30:11 - root - DEBUG - Added Delete button for car: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels, 17" TWO-TONE WHEELS, 17" TWO-TONE WHEELS', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:30:11 - root - DEBUG - Added main clickable area for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for quick action buttons for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:30:11 - root - DEBUG - Added Delete button for car: (32, 'WAUGGAFC6DN045451', 'AUDI', 'A6', '2013', 'PREMIUM PLUS QUATTRO', '', '', '5451')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:30:11 - root - DEBUG - Added main clickable area for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for quick action buttons for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:30:11 - root - DEBUG - Added Delete button for car: (33, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', '', '', '', '0831')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:30:11 - root - DEBUG - Added main clickable area for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for quick action buttons for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:30:11 - root - DEBUG - Added Delete button for car: (34, '1GCDT13E098100698', 'CHEVROLET', 'COLORADO', '2009', '1/2 TON', '', '', '0698')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:30:11 - root - DEBUG - Added main clickable area for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for quick action buttons for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:30:11 - root - DEBUG - Added Delete button for car: (35, '1GCVKREC3EZ414710', 'CADILLAC', 'XT5', '2014', 'AWD PREMIUM', '', '', '4710')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:30:11 - root - DEBUG - Added main clickable area for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for quick action buttons for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:30:11 - root - DEBUG - Added Delete button for car: (36, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO', '2015', '1500', '', '', '0125')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:30:11 - root - DEBUG - Added main clickable area for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for quick action buttons for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:30:11 - root - DEBUG - Added Delete button for car: (37, '1GCVKREC7HZ334394', 'CHEVROLET', 'SILVERADO', '2017', '1500', '', '', '4394')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:30:11 - root - DEBUG - Added main clickable area for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for quick action buttons for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:30:11 - root - DEBUG - Added Delete button for car: (38, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO', '2018', '1500', '', '', '9325')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:30:11 - root - DEBUG - Added main clickable area for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for quick action buttons for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:30:11 - root - DEBUG - Added Delete button for car: (39, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:30:11 - root - DEBUG - Added main clickable area for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for quick action buttons for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:30:11 - root - DEBUG - Added Delete button for car: (40, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:30:11 - root - DEBUG - Added main clickable area for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for quick action buttons for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:30:11 - root - DEBUG - Added Delete button for car: (41, '2C3CDXJG4EH335100', 'DODGE', 'CHARGER', '2014', '', '', '', '5100')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:30:11 - root - DEBUG - Added main clickable area for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for quick action buttons for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:30:11 - root - DEBUG - Added Delete button for car: (42, '2C3CDXBG6KH743706', 'DODGE', 'CHARGER', '2019', 'SXT', '', '', '3706')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:30:11 - root - DEBUG - Added main clickable area for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for quick action buttons for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:30:11 - root - DEBUG - Added Delete button for car: (43, '1FMCU0HX1DUD50962', 'FORD', 'ESCAPE', '2013', 'SEL', '', '', '0962')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:30:11 - root - DEBUG - Added main clickable area for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:30:11 - root - DEBUG - Created frame for quick action buttons for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:30:11 - root - DEBUG - Added Delete button for car: (44, '1FTFW1EF1BFA28854', 'FORD', 'F-150', '2011', 'Sd', ' asd', ' ', '8854')
-2024-06-30 08:30:12 - root - DEBUG - Fetched car details for VIN WAUGGAFC6DN045452: (23, 'WAUGGAFC6DN045452', 'CADILLAC', 'XT5', '', 'AWD PREMIUM', 'XENON HEADLIGHTS, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, FRONT DISTANCE WARNING, 17" Two-Tone, 17" Two-Tone, 17" Wheels, 17" TWO-TONE WHEELS, 17" TWO-TONE WHEELS', 'XENON HEADLIGHTS, WOODEN TRIM, FRONT DISTANCE WARNING', '5452')
-2024-06-30 08:30:12 - root - DEBUG - show_frame called with page_name=CarDetailsPage and kwargs={}
-2024-06-30 08:31:07 - root - DEBUG - Application main loop running.
-2024-06-30 08:31:07 - root - DEBUG - Application closed.
+2024-07-19 13:24:46 - root - DEBUG - Starting Car Inventory application.
+2024-07-19 13:24:46 - root - DEBUG - Initializing CarInventoryApp
+2024-07-19 13:24:46 - root - DEBUG - Icon loaded successfully
+2024-07-19 13:24:46 - root - DEBUG - Initializing database
+2024-07-19 13:24:46 - root - DEBUG - Database initialized successfully
+2024-07-19 13:24:46 - root - DEBUG - Archive database initialized successfully
+2024-07-19 13:24:46 - root - DEBUG - Car options loaded successfully
+2024-07-19 13:24:46 - root - DEBUG - Logo is added successfully
+2024-07-19 13:24:46 - root - DEBUG - Home Page label created
+2024-07-19 13:24:46 - root - DEBUG - Add Car button created
+2024-07-19 13:24:46 - root - DEBUG - Frame HomePage initialized
+2024-07-19 13:24:46 - root - DEBUG - Previous inventory list cleared
+2024-07-19 13:24:46 - root - DEBUG - Created frame for car: (1, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO 1500', '2018', 'LT Z71 DOUBLE CAB', 'TWIN TURBO, HID HEADLIGHTS, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, TOW PACKAGE, EXCELLENT TIRES, POWER WINDOWS, LOCKS AND SEAT, POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF, BEDLINER, 6 PASSENGER, 4 FULL SIZE DOORS, SUEDE INTERIOR, MASSAGE SEATS, LEATHER SPORT SEATS, MEMORY SEAT, 17"', 'XENON HEADLIGHTS, EXCELLENT TIRES, 6 PASSENGER', '9325', '17"', 0, 0, 0, 0, '', 0)
+2024-07-19 13:24:46 - root - DEBUG - Added main clickable area for car: (1, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO 1500', '2018', 'LT Z71 DOUBLE CAB', 'TWIN TURBO, HID HEADLIGHTS, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, TOW PACKAGE, EXCELLENT TIRES, POWER WINDOWS, LOCKS AND SEAT, POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF, BEDLINER, 6 PASSENGER, 4 FULL SIZE DOORS, SUEDE INTERIOR, MASSAGE SEATS, LEATHER SPORT SEATS, MEMORY SEAT, 17"', 'XENON HEADLIGHTS, EXCELLENT TIRES, 6 PASSENGER', '9325', '17"', 0, 0, 0, 0, '', 0)
+2024-07-19 13:24:46 - root - DEBUG - Created frame for quick action buttons for car: (1, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO 1500', '2018', 'LT Z71 DOUBLE CAB', 'TWIN TURBO, HID HEADLIGHTS, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, TOW PACKAGE, EXCELLENT TIRES, POWER WINDOWS, LOCKS AND SEAT, POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF, BEDLINER, 6 PASSENGER, 4 FULL SIZE DOORS, SUEDE INTERIOR, MASSAGE SEATS, LEATHER SPORT SEATS, MEMORY SEAT, 17"', 'XENON HEADLIGHTS, EXCELLENT TIRES, 6 PASSENGER', '9325', '17"', 0, 0, 0, 0, '', 0)
+2024-07-19 13:24:46 - root - DEBUG - Added Delete button for car: (1, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO 1500', '2018', 'LT Z71 DOUBLE CAB', 'TWIN TURBO, HID HEADLIGHTS, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, TOW PACKAGE, EXCELLENT TIRES, POWER WINDOWS, LOCKS AND SEAT, POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF, BEDLINER, 6 PASSENGER, 4 FULL SIZE DOORS, SUEDE INTERIOR, MASSAGE SEATS, LEATHER SPORT SEATS, MEMORY SEAT, 17"', 'XENON HEADLIGHTS, EXCELLENT TIRES, 6 PASSENGER', '9325', '17"', 0, 0, 0, 0, '', 0)
+2024-07-19 13:24:46 - root - DEBUG - Created frame for car: (5, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', 'LUXURY EDITION', "XENON HEADLIGHTS, FRONT AND REAR PARKING SENSORS, LUGGAGE RACK, EXCELLENT TIRES, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, POWER GATE, LEATHER INTERIOR, WOODEN TRIM, HEATED SEATS, HEATED STEERING WHEEL, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, BLUETOOTH AUDIO, REMOTE START, KEYLESS GO, SECURITY SYSTEM, ONSTAR, GARAGE OPENER, BLIND SPOT MONITOR, LANE KEEP ASSIST, FRONT COLLISION PREVENTION, OWNER'S MANUAL", 'XENON HEADLIGHTS, EXCELLENT TIRES, POWER GATE, LEATHER INTERIOR, HEATED SEATS, HEATED STEERING WHEEL, NAVIGATION SYSTEM, REVERSE CAMERA, BOSE SOUND SYSTEM, BLIND SPOT MONITOR, LANE KEEP ASSIST', '0831', '20"', 0, 0, 1, 0, '', 0)
+2024-07-19 13:24:46 - root - DEBUG - Added main clickable area for car: (5, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', 'LUXURY EDITION', "XENON HEADLIGHTS, FRONT AND REAR PARKING SENSORS, LUGGAGE RACK, EXCELLENT TIRES, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, POWER GATE, LEATHER INTERIOR, WOODEN TRIM, HEATED SEATS, HEATED STEERING WHEEL, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, BLUETOOTH AUDIO, REMOTE START, KEYLESS GO, SECURITY SYSTEM, ONSTAR, GARAGE OPENER, BLIND SPOT MONITOR, LANE KEEP ASSIST, FRONT COLLISION PREVENTION, OWNER'S MANUAL", 'XENON HEADLIGHTS, EXCELLENT TIRES, POWER GATE, LEATHER INTERIOR, HEATED SEATS, HEATED STEERING WHEEL, NAVIGATION SYSTEM, REVERSE CAMERA, BOSE SOUND SYSTEM, BLIND SPOT MONITOR, LANE KEEP ASSIST', '0831', '20"', 0, 0, 1, 0, '', 0)
+2024-07-19 13:24:46 - root - DEBUG - Created frame for quick action buttons for car: (5, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', 'LUXURY EDITION', "XENON HEADLIGHTS, FRONT AND REAR PARKING SENSORS, LUGGAGE RACK, EXCELLENT TIRES, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, POWER GATE, LEATHER INTERIOR, WOODEN TRIM, HEATED SEATS, HEATED STEERING WHEEL, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, BLUETOOTH AUDIO, REMOTE START, KEYLESS GO, SECURITY SYSTEM, ONSTAR, GARAGE OPENER, BLIND SPOT MONITOR, LANE KEEP ASSIST, FRONT COLLISION PREVENTION, OWNER'S MANUAL", 'XENON HEADLIGHTS, EXCELLENT TIRES, POWER GATE, LEATHER INTERIOR, HEATED SEATS, HEATED STEERING WHEEL, NAVIGATION SYSTEM, REVERSE CAMERA, BOSE SOUND SYSTEM, BLIND SPOT MONITOR, LANE KEEP ASSIST', '0831', '20"', 0, 0, 1, 0, '', 0)
+2024-07-19 13:24:46 - root - DEBUG - Added Delete button for car: (5, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', 'LUXURY EDITION', "XENON HEADLIGHTS, FRONT AND REAR PARKING SENSORS, LUGGAGE RACK, EXCELLENT TIRES, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, POWER GATE, LEATHER INTERIOR, WOODEN TRIM, HEATED SEATS, HEATED STEERING WHEEL, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, BLUETOOTH AUDIO, REMOTE START, KEYLESS GO, SECURITY SYSTEM, ONSTAR, GARAGE OPENER, BLIND SPOT MONITOR, LANE KEEP ASSIST, FRONT COLLISION PREVENTION, OWNER'S MANUAL", 'XENON HEADLIGHTS, EXCELLENT TIRES, POWER GATE, LEATHER INTERIOR, HEATED SEATS, HEATED STEERING WHEEL, NAVIGATION SYSTEM, REVERSE CAMERA, BOSE SOUND SYSTEM, BLIND SPOT MONITOR, LANE KEEP ASSIST', '0831', '20"', 0, 0, 1, 0, '', 0)
+2024-07-19 13:24:46 - root - DEBUG - Created frame for car: (6, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO 1500', '2015', 'LT DOUBLE CAB 4WD', "4WD, FOG LIGHTS, EXCELLENT TIRES, TOW PACKAGE, POWER WINDOWS, LOCKS AND SEAT, BEDLINER, 6 PASSENGER, 4 DOORS, HEATED SEATS, DUAL CLIMATE, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, CD PLAYER, BLUETOOTH AUDIO, REMOTE START, SECURITY SYSTEM, ONSTAR, OWNER'S MANUAL", '6 PASSENGER, EXCELLENT TIRES, HEATED SEATS, REVERSE CAMERA', '0125', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:46 - root - DEBUG - Added main clickable area for car: (6, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO 1500', '2015', 'LT DOUBLE CAB 4WD', "4WD, FOG LIGHTS, EXCELLENT TIRES, TOW PACKAGE, POWER WINDOWS, LOCKS AND SEAT, BEDLINER, 6 PASSENGER, 4 DOORS, HEATED SEATS, DUAL CLIMATE, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, CD PLAYER, BLUETOOTH AUDIO, REMOTE START, SECURITY SYSTEM, ONSTAR, OWNER'S MANUAL", '6 PASSENGER, EXCELLENT TIRES, HEATED SEATS, REVERSE CAMERA', '0125', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:46 - root - DEBUG - Created frame for quick action buttons for car: (6, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO 1500', '2015', 'LT DOUBLE CAB 4WD', "4WD, FOG LIGHTS, EXCELLENT TIRES, TOW PACKAGE, POWER WINDOWS, LOCKS AND SEAT, BEDLINER, 6 PASSENGER, 4 DOORS, HEATED SEATS, DUAL CLIMATE, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, CD PLAYER, BLUETOOTH AUDIO, REMOTE START, SECURITY SYSTEM, ONSTAR, OWNER'S MANUAL", '6 PASSENGER, EXCELLENT TIRES, HEATED SEATS, REVERSE CAMERA', '0125', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:46 - root - DEBUG - Added Delete button for car: (6, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO 1500', '2015', 'LT DOUBLE CAB 4WD', "4WD, FOG LIGHTS, EXCELLENT TIRES, TOW PACKAGE, POWER WINDOWS, LOCKS AND SEAT, BEDLINER, 6 PASSENGER, 4 DOORS, HEATED SEATS, DUAL CLIMATE, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, CD PLAYER, BLUETOOTH AUDIO, REMOTE START, SECURITY SYSTEM, ONSTAR, OWNER'S MANUAL", '6 PASSENGER, EXCELLENT TIRES, HEATED SEATS, REVERSE CAMERA', '0125', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:46 - root - DEBUG - Created frame for car: (7, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:46 - root - DEBUG - Added main clickable area for car: (7, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:46 - root - DEBUG - Created frame for quick action buttons for car: (7, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:46 - root - DEBUG - Added Delete button for car: (7, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:46 - root - DEBUG - Created frame for car: (8, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:46 - root - DEBUG - Added main clickable area for car: (8, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:46 - root - DEBUG - Created frame for quick action buttons for car: (8, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:46 - root - DEBUG - Added Delete button for car: (8, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:46 - root - DEBUG - Created frame for car: (13, 'WAUGGAFC6DN045452', 'AUDI', 'A6', '2013', '3.0T QUATTRO PREMIUM PLUS AWD SUPERCHARGED', "AWD, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, FRONT AND REAR PARKING SENSORS, POWER WINDOWS, LOCKS, SEATS AND MOONROOF, POWER FOLDING MIRRORS, LEATHER INTERIOR, WOODEN TRIM, MEMORY SEAT, FRONT AND REAR HEATED SEATS, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, CD PLAYER, BLUETOOTH AUDIO, PUSH START, KEYLESS GO, SECURITY SYSTEM, HEATED MIRRORS, GARAGE OPENER, OWNER'S MANUAL, BLIND SPOT MONITOR", 'XENON HEADLIGHTS, LEATHER INTERIOR, FRONT AND REAR HEATED SEATS, NAVIGATION SYSTEM, REVERSE CAMERA, BLIND SPOT MONITOR, MOONROOF', '5452', '18"', 1, 0, 0, 0, '', 0)
+2024-07-19 13:24:46 - root - DEBUG - Added main clickable area for car: (13, 'WAUGGAFC6DN045452', 'AUDI', 'A6', '2013', '3.0T QUATTRO PREMIUM PLUS AWD SUPERCHARGED', "AWD, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, FRONT AND REAR PARKING SENSORS, POWER WINDOWS, LOCKS, SEATS AND MOONROOF, POWER FOLDING MIRRORS, LEATHER INTERIOR, WOODEN TRIM, MEMORY SEAT, FRONT AND REAR HEATED SEATS, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, CD PLAYER, BLUETOOTH AUDIO, PUSH START, KEYLESS GO, SECURITY SYSTEM, HEATED MIRRORS, GARAGE OPENER, OWNER'S MANUAL, BLIND SPOT MONITOR", 'XENON HEADLIGHTS, LEATHER INTERIOR, FRONT AND REAR HEATED SEATS, NAVIGATION SYSTEM, REVERSE CAMERA, BLIND SPOT MONITOR, MOONROOF', '5452', '18"', 1, 0, 0, 0, '', 0)
+2024-07-19 13:24:46 - root - DEBUG - Created frame for quick action buttons for car: (13, 'WAUGGAFC6DN045452', 'AUDI', 'A6', '2013', '3.0T QUATTRO PREMIUM PLUS AWD SUPERCHARGED', "AWD, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, FRONT AND REAR PARKING SENSORS, POWER WINDOWS, LOCKS, SEATS AND MOONROOF, POWER FOLDING MIRRORS, LEATHER INTERIOR, WOODEN TRIM, MEMORY SEAT, FRONT AND REAR HEATED SEATS, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, CD PLAYER, BLUETOOTH AUDIO, PUSH START, KEYLESS GO, SECURITY SYSTEM, HEATED MIRRORS, GARAGE OPENER, OWNER'S MANUAL, BLIND SPOT MONITOR", 'XENON HEADLIGHTS, LEATHER INTERIOR, FRONT AND REAR HEATED SEATS, NAVIGATION SYSTEM, REVERSE CAMERA, BLIND SPOT MONITOR, MOONROOF', '5452', '18"', 1, 0, 0, 0, '', 0)
+2024-07-19 13:24:46 - root - DEBUG - Added Delete button for car: (13, 'WAUGGAFC6DN045452', 'AUDI', 'A6', '2013', '3.0T QUATTRO PREMIUM PLUS AWD SUPERCHARGED', "AWD, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, FRONT AND REAR PARKING SENSORS, POWER WINDOWS, LOCKS, SEATS AND MOONROOF, POWER FOLDING MIRRORS, LEATHER INTERIOR, WOODEN TRIM, MEMORY SEAT, FRONT AND REAR HEATED SEATS, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, CD PLAYER, BLUETOOTH AUDIO, PUSH START, KEYLESS GO, SECURITY SYSTEM, HEATED MIRRORS, GARAGE OPENER, OWNER'S MANUAL, BLIND SPOT MONITOR", 'XENON HEADLIGHTS, LEATHER INTERIOR, FRONT AND REAR HEATED SEATS, NAVIGATION SYSTEM, REVERSE CAMERA, BLIND SPOT MONITOR, MOONROOF', '5452', '18"', 1, 0, 0, 0, '', 0)
+2024-07-19 13:24:46 - root - DEBUG - Frame InventoryPage initialized
+2024-07-19 13:24:46 - root - DEBUG - Frame AddCarPage initialized
+2024-07-19 13:24:46 - root - DEBUG - Initializing SettingsPage
+2024-07-19 13:24:46 - root - DEBUG - Settings label created
+2024-07-19 13:24:46 - root - DEBUG - Loaded car_options.json successfully
+2024-07-19 13:24:46 - root - DEBUG - Category label created
+2024-07-19 13:24:46 - root - DEBUG - Category dropdown created
+2024-07-19 13:24:46 - root - DEBUG - Feature label created
+2024-07-19 13:24:46 - root - DEBUG - Feature input created
+2024-07-19 13:24:46 - root - DEBUG - Save button created
+2024-07-19 13:24:46 - root - DEBUG - Toggle theme button created
+2024-07-19 13:24:46 - root - DEBUG - Frame SettingsPage initialized
+2024-07-19 13:24:46 - root - DEBUG - Frame ArchivePage initialized
+2024-07-19 13:24:46 - root - DEBUG - show_frame called with page_name=HomePage and kwargs={}
+2024-07-19 13:24:48 - root - DEBUG - show_frame called with page_name=InventoryPage and kwargs={}
+2024-07-19 13:24:48 - root - DEBUG - Previous inventory list cleared
+2024-07-19 13:24:48 - root - DEBUG - Created frame for car: (1, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO 1500', '2018', 'LT Z71 DOUBLE CAB', 'TWIN TURBO, HID HEADLIGHTS, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, TOW PACKAGE, EXCELLENT TIRES, POWER WINDOWS, LOCKS AND SEAT, POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF, BEDLINER, 6 PASSENGER, 4 FULL SIZE DOORS, SUEDE INTERIOR, MASSAGE SEATS, LEATHER SPORT SEATS, MEMORY SEAT, 17"', 'XENON HEADLIGHTS, EXCELLENT TIRES, 6 PASSENGER', '9325', '17"', 0, 0, 0, 0, '', 0)
+2024-07-19 13:24:48 - root - DEBUG - Added main clickable area for car: (1, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO 1500', '2018', 'LT Z71 DOUBLE CAB', 'TWIN TURBO, HID HEADLIGHTS, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, TOW PACKAGE, EXCELLENT TIRES, POWER WINDOWS, LOCKS AND SEAT, POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF, BEDLINER, 6 PASSENGER, 4 FULL SIZE DOORS, SUEDE INTERIOR, MASSAGE SEATS, LEATHER SPORT SEATS, MEMORY SEAT, 17"', 'XENON HEADLIGHTS, EXCELLENT TIRES, 6 PASSENGER', '9325', '17"', 0, 0, 0, 0, '', 0)
+2024-07-19 13:24:48 - root - DEBUG - Created frame for quick action buttons for car: (1, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO 1500', '2018', 'LT Z71 DOUBLE CAB', 'TWIN TURBO, HID HEADLIGHTS, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, TOW PACKAGE, EXCELLENT TIRES, POWER WINDOWS, LOCKS AND SEAT, POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF, BEDLINER, 6 PASSENGER, 4 FULL SIZE DOORS, SUEDE INTERIOR, MASSAGE SEATS, LEATHER SPORT SEATS, MEMORY SEAT, 17"', 'XENON HEADLIGHTS, EXCELLENT TIRES, 6 PASSENGER', '9325', '17"', 0, 0, 0, 0, '', 0)
+2024-07-19 13:24:48 - root - DEBUG - Added Delete button for car: (1, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO 1500', '2018', 'LT Z71 DOUBLE CAB', 'TWIN TURBO, HID HEADLIGHTS, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, TOW PACKAGE, EXCELLENT TIRES, POWER WINDOWS, LOCKS AND SEAT, POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF, BEDLINER, 6 PASSENGER, 4 FULL SIZE DOORS, SUEDE INTERIOR, MASSAGE SEATS, LEATHER SPORT SEATS, MEMORY SEAT, 17"', 'XENON HEADLIGHTS, EXCELLENT TIRES, 6 PASSENGER', '9325', '17"', 0, 0, 0, 0, '', 0)
+2024-07-19 13:24:48 - root - DEBUG - Created frame for car: (5, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', 'LUXURY EDITION', "XENON HEADLIGHTS, FRONT AND REAR PARKING SENSORS, LUGGAGE RACK, EXCELLENT TIRES, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, POWER GATE, LEATHER INTERIOR, WOODEN TRIM, HEATED SEATS, HEATED STEERING WHEEL, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, BLUETOOTH AUDIO, REMOTE START, KEYLESS GO, SECURITY SYSTEM, ONSTAR, GARAGE OPENER, BLIND SPOT MONITOR, LANE KEEP ASSIST, FRONT COLLISION PREVENTION, OWNER'S MANUAL", 'XENON HEADLIGHTS, EXCELLENT TIRES, POWER GATE, LEATHER INTERIOR, HEATED SEATS, HEATED STEERING WHEEL, NAVIGATION SYSTEM, REVERSE CAMERA, BOSE SOUND SYSTEM, BLIND SPOT MONITOR, LANE KEEP ASSIST', '0831', '20"', 0, 0, 1, 0, '', 0)
+2024-07-19 13:24:48 - root - DEBUG - Added main clickable area for car: (5, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', 'LUXURY EDITION', "XENON HEADLIGHTS, FRONT AND REAR PARKING SENSORS, LUGGAGE RACK, EXCELLENT TIRES, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, POWER GATE, LEATHER INTERIOR, WOODEN TRIM, HEATED SEATS, HEATED STEERING WHEEL, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, BLUETOOTH AUDIO, REMOTE START, KEYLESS GO, SECURITY SYSTEM, ONSTAR, GARAGE OPENER, BLIND SPOT MONITOR, LANE KEEP ASSIST, FRONT COLLISION PREVENTION, OWNER'S MANUAL", 'XENON HEADLIGHTS, EXCELLENT TIRES, POWER GATE, LEATHER INTERIOR, HEATED SEATS, HEATED STEERING WHEEL, NAVIGATION SYSTEM, REVERSE CAMERA, BOSE SOUND SYSTEM, BLIND SPOT MONITOR, LANE KEEP ASSIST', '0831', '20"', 0, 0, 1, 0, '', 0)
+2024-07-19 13:24:48 - root - DEBUG - Created frame for quick action buttons for car: (5, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', 'LUXURY EDITION', "XENON HEADLIGHTS, FRONT AND REAR PARKING SENSORS, LUGGAGE RACK, EXCELLENT TIRES, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, POWER GATE, LEATHER INTERIOR, WOODEN TRIM, HEATED SEATS, HEATED STEERING WHEEL, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, BLUETOOTH AUDIO, REMOTE START, KEYLESS GO, SECURITY SYSTEM, ONSTAR, GARAGE OPENER, BLIND SPOT MONITOR, LANE KEEP ASSIST, FRONT COLLISION PREVENTION, OWNER'S MANUAL", 'XENON HEADLIGHTS, EXCELLENT TIRES, POWER GATE, LEATHER INTERIOR, HEATED SEATS, HEATED STEERING WHEEL, NAVIGATION SYSTEM, REVERSE CAMERA, BOSE SOUND SYSTEM, BLIND SPOT MONITOR, LANE KEEP ASSIST', '0831', '20"', 0, 0, 1, 0, '', 0)
+2024-07-19 13:24:48 - root - DEBUG - Added Delete button for car: (5, '1GYKNCRS4JZ190831', 'CADILLAC', 'XT5', '2018', 'LUXURY EDITION', "XENON HEADLIGHTS, FRONT AND REAR PARKING SENSORS, LUGGAGE RACK, EXCELLENT TIRES, POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF, POWER GATE, LEATHER INTERIOR, WOODEN TRIM, HEATED SEATS, HEATED STEERING WHEEL, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, BLUETOOTH AUDIO, REMOTE START, KEYLESS GO, SECURITY SYSTEM, ONSTAR, GARAGE OPENER, BLIND SPOT MONITOR, LANE KEEP ASSIST, FRONT COLLISION PREVENTION, OWNER'S MANUAL", 'XENON HEADLIGHTS, EXCELLENT TIRES, POWER GATE, LEATHER INTERIOR, HEATED SEATS, HEATED STEERING WHEEL, NAVIGATION SYSTEM, REVERSE CAMERA, BOSE SOUND SYSTEM, BLIND SPOT MONITOR, LANE KEEP ASSIST', '0831', '20"', 0, 0, 1, 0, '', 0)
+2024-07-19 13:24:48 - root - DEBUG - Created frame for car: (6, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO 1500', '2015', 'LT DOUBLE CAB 4WD', "4WD, FOG LIGHTS, EXCELLENT TIRES, TOW PACKAGE, POWER WINDOWS, LOCKS AND SEAT, BEDLINER, 6 PASSENGER, 4 DOORS, HEATED SEATS, DUAL CLIMATE, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, CD PLAYER, BLUETOOTH AUDIO, REMOTE START, SECURITY SYSTEM, ONSTAR, OWNER'S MANUAL", '6 PASSENGER, EXCELLENT TIRES, HEATED SEATS, REVERSE CAMERA', '0125', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:48 - root - DEBUG - Added main clickable area for car: (6, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO 1500', '2015', 'LT DOUBLE CAB 4WD', "4WD, FOG LIGHTS, EXCELLENT TIRES, TOW PACKAGE, POWER WINDOWS, LOCKS AND SEAT, BEDLINER, 6 PASSENGER, 4 DOORS, HEATED SEATS, DUAL CLIMATE, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, CD PLAYER, BLUETOOTH AUDIO, REMOTE START, SECURITY SYSTEM, ONSTAR, OWNER'S MANUAL", '6 PASSENGER, EXCELLENT TIRES, HEATED SEATS, REVERSE CAMERA', '0125', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:48 - root - DEBUG - Created frame for quick action buttons for car: (6, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO 1500', '2015', 'LT DOUBLE CAB 4WD', "4WD, FOG LIGHTS, EXCELLENT TIRES, TOW PACKAGE, POWER WINDOWS, LOCKS AND SEAT, BEDLINER, 6 PASSENGER, 4 DOORS, HEATED SEATS, DUAL CLIMATE, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, CD PLAYER, BLUETOOTH AUDIO, REMOTE START, SECURITY SYSTEM, ONSTAR, OWNER'S MANUAL", '6 PASSENGER, EXCELLENT TIRES, HEATED SEATS, REVERSE CAMERA', '0125', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:48 - root - DEBUG - Added Delete button for car: (6, '1GCVKREC0FZ390125', 'CHEVROLET', 'SILVERADO 1500', '2015', 'LT DOUBLE CAB 4WD', "4WD, FOG LIGHTS, EXCELLENT TIRES, TOW PACKAGE, POWER WINDOWS, LOCKS AND SEAT, BEDLINER, 6 PASSENGER, 4 DOORS, HEATED SEATS, DUAL CLIMATE, REVERSE CAMERA, TOUCHSCREEN RADIO W/ APPS, AUX, USB, CD PLAYER, BLUETOOTH AUDIO, REMOTE START, SECURITY SYSTEM, ONSTAR, OWNER'S MANUAL", '6 PASSENGER, EXCELLENT TIRES, HEATED SEATS, REVERSE CAMERA', '0125', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:48 - root - DEBUG - Created frame for car: (7, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:48 - root - DEBUG - Added main clickable area for car: (7, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:48 - root - DEBUG - Created frame for quick action buttons for car: (7, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:48 - root - DEBUG - Added Delete button for car: (7, '1GNSKHKC8GR379674', 'CHEVROLET', 'SUBURBAN', '2016', '', '', '', '9674', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:48 - root - DEBUG - Created frame for car: (8, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:48 - root - DEBUG - Added main clickable area for car: (8, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:48 - root - DEBUG - Created frame for quick action buttons for car: (8, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:48 - root - DEBUG - Added Delete button for car: (8, '1GNSKBKC2FR152153', 'CHEVROLET', 'TAHOE', '2015', '1/2 TON', '', '', '2153', 'None', 0, 0, 0, 0, 'None', 0)
+2024-07-19 13:24:48 - root - DEBUG - Created frame for car: (13, 'WAUGGAFC6DN045452', 'AUDI', 'A6', '2013', '3.0T QUATTRO PREMIUM PLUS AWD SUPERCHARGED', "AWD, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, FRONT AND REAR PARKING SENSORS, POWER WINDOWS, LOCKS, SEATS AND MOONROOF, POWER FOLDING MIRRORS, LEATHER INTERIOR, WOODEN TRIM, MEMORY SEAT, FRONT AND REAR HEATED SEATS, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, CD PLAYER, BLUETOOTH AUDIO, PUSH START, KEYLESS GO, SECURITY SYSTEM, HEATED MIRRORS, GARAGE OPENER, OWNER'S MANUAL, BLIND SPOT MONITOR", 'XENON HEADLIGHTS, LEATHER INTERIOR, FRONT AND REAR HEATED SEATS, NAVIGATION SYSTEM, REVERSE CAMERA, BLIND SPOT MONITOR, MOONROOF', '5452', '18"', 1, 0, 0, 0, '', 0)
+2024-07-19 13:24:48 - root - DEBUG - Added main clickable area for car: (13, 'WAUGGAFC6DN045452', 'AUDI', 'A6', '2013', '3.0T QUATTRO PREMIUM PLUS AWD SUPERCHARGED', "AWD, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, FRONT AND REAR PARKING SENSORS, POWER WINDOWS, LOCKS, SEATS AND MOONROOF, POWER FOLDING MIRRORS, LEATHER INTERIOR, WOODEN TRIM, MEMORY SEAT, FRONT AND REAR HEATED SEATS, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, CD PLAYER, BLUETOOTH AUDIO, PUSH START, KEYLESS GO, SECURITY SYSTEM, HEATED MIRRORS, GARAGE OPENER, OWNER'S MANUAL, BLIND SPOT MONITOR", 'XENON HEADLIGHTS, LEATHER INTERIOR, FRONT AND REAR HEATED SEATS, NAVIGATION SYSTEM, REVERSE CAMERA, BLIND SPOT MONITOR, MOONROOF', '5452', '18"', 1, 0, 0, 0, '', 0)
+2024-07-19 13:24:48 - root - DEBUG - Created frame for quick action buttons for car: (13, 'WAUGGAFC6DN045452', 'AUDI', 'A6', '2013', '3.0T QUATTRO PREMIUM PLUS AWD SUPERCHARGED', "AWD, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, FRONT AND REAR PARKING SENSORS, POWER WINDOWS, LOCKS, SEATS AND MOONROOF, POWER FOLDING MIRRORS, LEATHER INTERIOR, WOODEN TRIM, MEMORY SEAT, FRONT AND REAR HEATED SEATS, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, CD PLAYER, BLUETOOTH AUDIO, PUSH START, KEYLESS GO, SECURITY SYSTEM, HEATED MIRRORS, GARAGE OPENER, OWNER'S MANUAL, BLIND SPOT MONITOR", 'XENON HEADLIGHTS, LEATHER INTERIOR, FRONT AND REAR HEATED SEATS, NAVIGATION SYSTEM, REVERSE CAMERA, BLIND SPOT MONITOR, MOONROOF', '5452', '18"', 1, 0, 0, 0, '', 0)
+2024-07-19 13:24:48 - root - DEBUG - Added Delete button for car: (13, 'WAUGGAFC6DN045452', 'AUDI', 'A6', '2013', '3.0T QUATTRO PREMIUM PLUS AWD SUPERCHARGED', "AWD, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, FRONT AND REAR PARKING SENSORS, POWER WINDOWS, LOCKS, SEATS AND MOONROOF, POWER FOLDING MIRRORS, LEATHER INTERIOR, WOODEN TRIM, MEMORY SEAT, FRONT AND REAR HEATED SEATS, DUAL CLIMATE, REAR A/C, NAVIGATION SYSTEM, REVERSE CAMERA, CD PLAYER, BLUETOOTH AUDIO, PUSH START, KEYLESS GO, SECURITY SYSTEM, HEATED MIRRORS, GARAGE OPENER, OWNER'S MANUAL, BLIND SPOT MONITOR", 'XENON HEADLIGHTS, LEATHER INTERIOR, FRONT AND REAR HEATED SEATS, NAVIGATION SYSTEM, REVERSE CAMERA, BLIND SPOT MONITOR, MOONROOF', '5452', '18"', 1, 0, 0, 0, '', 0)
+2024-07-19 13:24:50 - root - DEBUG - Fetched car details for VIN 3GCUKRECXJG639325: (1, '3GCUKRECXJG639325', 'CHEVROLET', 'SILVERADO 1500', '2018', 'LT Z71 DOUBLE CAB', 'TWIN TURBO, HID HEADLIGHTS, XENON HEADLIGHTS, HEADLIGHT WASHERS, PARKING SENSORS, TOW PACKAGE, EXCELLENT TIRES, POWER WINDOWS, LOCKS AND SEAT, POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF, BEDLINER, 6 PASSENGER, 4 FULL SIZE DOORS, SUEDE INTERIOR, MASSAGE SEATS, LEATHER SPORT SEATS, MEMORY SEAT, 17"', 'XENON HEADLIGHTS, EXCELLENT TIRES, 6 PASSENGER', '9325', '17"', 0, 0, 0, 0, '', 0)
+2024-07-19 13:25:20 - root - DEBUG - Application main loop running.
+2024-07-19 13:25:20 - root - DEBUG - Application closed.

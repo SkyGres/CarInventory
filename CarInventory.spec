@@ -1,15 +1,11 @@
 # -*- mode: python ; coding: utf-8 -*-
-from PyInstaller.utils.hooks import collect_data_files
-
-datas = [('car_options.json', '.'), ('logo.ico', '.'), ('logo.png', '.')]
-datas += collect_data_files('sv_ttk')
 
 
 a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=datas,
+    datas=[('C:\\Users\\leone\\OneDrive\\Coding\\CarInventory\\venvnew\\Lib\\site-packages\\sv_ttk', 'sv_ttk')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

@@ -41,19 +41,17 @@ class CarDetailsPage(tk.Frame):
             label.grid(row=i, column=0, padx=10, pady=5, sticky="e")
             entry_var = tk.StringVar()
             entry = ttk.Entry(self.scrollable_frame, textvariable=entry_var)
-            if self.car_details:
-                entry_var.set(self.car_details[i+2])  # Adjust indices based on your tuple structure
             entry.grid(row=i, column=1, padx=10, pady=5, sticky="ew")
             self.entries[field.lower().replace(' ', '_')] = entry_var  # key used in update and save methods
 
         # Text field for options
         ttk.Label(self.scrollable_frame, text="Options:").grid(row=len(fields), column=0, padx=10, pady=5, sticky="e")
-        self.options_text = tk.Text(self.scrollable_frame, height=5)
+        self.options_text = tk.Text(self.scrollable_frame, height=10)
         self.options_text.grid(row=len(fields), column=1, padx=10, pady=5, sticky="ew")
 
         # Text field for key features
         ttk.Label(self.scrollable_frame, text="Key Features:").grid(row=len(fields) + 1, column=0, padx=10, pady=5, sticky="e")
-        self.key_features_text = tk.Text(self.scrollable_frame, height=5)
+        self.key_features_text = tk.Text(self.scrollable_frame, height=10)
         self.key_features_text.grid(row=len(fields) + 1, column=1, padx=10, pady=5, sticky="ew")
 
         # Checkbox options with category frames
@@ -86,30 +84,70 @@ class CarDetailsPage(tk.Frame):
         self.wheel_size_var = tk.StringVar()
         self.wheel_material_var = tk.StringVar()
         self.wheel_custom_var = tk.StringVar()
+        self.wheel_key_feature_var = tk.BooleanVar()
 
         ttk.Label(wheels_frame, text="Size:").grid(row=0, column=0, padx=5, pady=2)
         ttk.Combobox(wheels_frame, textvariable=self.wheel_size_var, values=[f"{i}\"" for i in range(14, 23)]).grid(row=0, column=1, padx=5, pady=2)
 
         ttk.Label(wheels_frame, text="Material:").grid(row=1, column=0, padx=5, pady=2)
-        ttk.Combobox(wheels_frame, textvariable=self.wheel_material_var, values=["ALLOY WHEELS", "CHROME WHEELS", "TWO-TONE WHEELS", "WHEELS"]).grid(row=1, column=1, padx=5, pady=2)
+        ttk.Combobox(wheels_frame, textvariable=self.wheel_material_var, values=["None", "ALLOY WHEELS", "CHROME WHEELS", "TWO-TONE WHEELS", "WHEELS"]).grid(row=1, column=1, padx=5, pady=2)
 
         ttk.Label(wheels_frame, text="Custom:").grid(row=2, column=0, padx=5, pady=2)
         ttk.Entry(wheels_frame, textvariable=self.wheel_custom_var).grid(row=2, column=1, padx=5, pady=2)
 
-        ttk.Checkbutton(wheels_frame, text="Key Feature", variable=tk.BooleanVar(), command=self.update_key_features_text).grid(row=3, column=0, columnspan=2, pady=5)
+        ttk.Checkbutton(wheels_frame, text="Key Feature", variable=self.wheel_key_feature_var, command=self.update_key_features_text).grid(row=3, column=0, columnspan=2, pady=5)
 
         # Save Changes Button
         ttk.Button(self.scrollable_frame, text="Save Changes", command=self.save_changes).grid(row=row + 1, column=0, columnspan=2, pady=10)
 
     def update_options_text(self):
         selected_options = [option for option, var in self.vars.items() if var.get()]
+        wheel_description = self.generate_wheel_description()
+        if wheel_description:
+            selected_options.append(wheel_description)
         self.options_text.delete("1.0", tk.END)
         self.options_text.insert("1.0", ", ".join(selected_options))
 
     def update_key_features_text(self):
         selected_key_features = [option for option, var in self.key_feature_vars.items() if var.get()]
+
+        # Handle special cases for moonroofs
+        if "POWER WINDOWS, LOCKS, SEAT AND MOONROOF" in selected_key_features:
+            selected_key_features.remove("POWER WINDOWS, LOCKS, SEAT AND MOONROOF")
+            if "MOONROOF" not in selected_key_features:
+                selected_key_features.append("MOONROOF")
+
+        if "POWER WINDOWS, LOCKS, SEATS AND MOONROOF" in selected_key_features:
+            selected_key_features.remove("POWER WINDOWS, LOCKS, SEATS AND MOONROOF")
+            if "MOONROOF" not in selected_key_features:
+                selected_key_features.append("MOONROOF")
+
+        if "POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF" in selected_key_features:
+            selected_key_features.remove("POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF")
+            if "DUAL MOONROOF" not in selected_key_features:
+                selected_key_features.append("DUAL MOONROOF")
+
+        if "POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF" in selected_key_features:
+            selected_key_features.remove("POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF")
+            if "PANORAMIC MOONROOF" not in selected_key_features:
+                selected_key_features.append("PANORAMIC MOONROOF")
+
+        if self.wheel_key_feature_var.get():
+            wheel_description = self.generate_wheel_description()
+            if wheel_description:
+                selected_key_features.append(wheel_description)
+
         self.key_features_text.delete("1.0", tk.END)
         self.key_features_text.insert("1.0", ", ".join(selected_key_features))
+
+    def generate_wheel_description(self):
+        wheel_size = self.wheel_size_var.get()
+        wheel_material = self.wheel_material_var.get()
+        wheel_custom = self.wheel_custom_var.get()
+        if wheel_material == "None":
+            wheel_material = ""
+        wheel_description = f"{wheel_size} {wheel_material} {wheel_custom}".strip()
+        return wheel_description if wheel_description != "" else None
 
     def bind_mousewheel(self, widget):
         widget.bind("<Enter>", lambda event: widget.bind_all("<MouseWheel>", self.on_mousewheel))
@@ -126,18 +164,16 @@ class CarDetailsPage(tk.Frame):
                 'model_year': self.entries['year'].get(),
                 'series': self.entries['series'].get(),
                 'options': self.options_text.get("1.0", tk.END).strip(),
-                'key_features': self.key_features_text.get("1.0", tk.END).strip()
+                'key_features': self.key_features_text.get("1.0", tk.END).strip(),
+                'wheel_size': self.wheel_size_var.get(),
+                'alloy_wheels': self.wheel_material_var.get() == "ALLOY WHEELS",
+                'two_tone_wheels': self.wheel_material_var.get() == "TWO-TONE WHEELS",
+                'chrome_wheels': self.wheel_material_var.get() == "CHROME WHEELS",
+                'wheels': self.wheel_material_var.get() == "WHEELS",
+                'custom_wheels': self.wheel_custom_var.get(),
+                'is_wheel_key_feature': self.wheel_key_feature_var.get()
             }
-
-            # Add wheels details to options
-            wheel_size = self.wheel_size_var.get()
-            wheel_material = self.wheel_material_var.get()
-            wheel_custom = self.wheel_custom_var.get()
-            wheel_description = f"{wheel_size} {wheel_material} {wheel_custom}".strip()
-            if wheel_description:
-                updated_details['options'] += f", {wheel_description}"
-
-            self.controller.update_car_details(self.car_details[1], **updated_details)  # Assuming [1] is the VIN
+            self.controller.update_car_details(self.car_details[1], **updated_details)
             messagebox.showinfo("Success", "Details updated successfully!")
             self.controller.show_frame("InventoryPage")  # Redirect to the inventory frame
         except KeyError as e:
@@ -148,30 +184,57 @@ class CarDetailsPage(tk.Frame):
             logging.error(f"Failed to save changes: {str(e)}")
 
     def update_details(self, new_details):
+        # Clear existing values
+        for field in self.entries.values():
+            field.set("")
+        self.options_text.delete("1.0", tk.END)
+        self.key_features_text.delete("1.0", tk.END)
+        self.wheel_size_var.set("")
+        self.wheel_material_var.set("None")
+        self.wheel_custom_var.set("")
+        self.wheel_key_feature_var.set(False)
+
         if new_details:
             self.car_details = new_details
-            for i, field in enumerate(['make', 'model', 'model_year', 'series']):
+            # Log the car details
+            logging.debug(f"New car details: {self.car_details}")
+            # Update the entries with the new details
+            for i, field in enumerate(['make', 'model', 'year', 'series']):
                 if field in self.entries:
+                    logging.debug(f"Setting {field} to {self.car_details[i + 2]}")
                     self.entries[field].set(self.car_details[i + 2])
-            self.options_text.delete("1.0", tk.END)
             self.options_text.insert("1.0", self.car_details[6] if len(self.car_details) > 6 else "")
-            self.key_features_text.delete("1.0", tk.END)
             self.key_features_text.insert("1.0", self.car_details[7] if len(self.car_details) > 7 else "")
             self.update_options_checkboxes()
             self.update_key_features_checkboxes()
+            self.update_wheels_section()
 
     def update_options_checkboxes(self):
         options_text = self.car_details[6] if len(self.car_details) > 6 else ""
         for option, var in self.vars.items():
-            if option in options_text:
-                var.set(True)
-            else:
-                var.set(False)
+            var.set(option in options_text)
 
     def update_key_features_checkboxes(self):
         key_features_text = self.car_details[7] if len(self.car_details) > 7 else ""
         for option, var in self.key_feature_vars.items():
-            if option in key_features_text:
-                var.set(True)
-            else:
-                var.set(False)
+            var.set(option in key_features_text)
+
+    def update_wheels_section(self):
+        self.wheel_size_var.set(self.car_details[9] if len(self.car_details) > 9 else "")
+        if self.car_details[10]:
+            self.wheel_material_var.set("ALLOY WHEELS")
+        elif self.car_details[11]:
+            self.wheel_material_var.set("TWO-TONE WHEELS")
+        elif self.car_details[12]:
+            self.wheel_material_var.set("CHROME WHEELS")
+        elif self.car_details[13]:
+            self.wheel_material_var.set("WHEELS")
+        else:
+            self.wheel_material_var.set("None")
+        self.wheel_custom_var.set(self.car_details[14] if len(self.car_details) > 14 else "")
+        wheel_description = self.generate_wheel_description()
+        key_features_text = self.car_details[7] if len(self.car_details) > 7 else ""
+        self.wheel_key_feature_var.set(wheel_description in key_features_text)
+
+# Add logging configuration
+logging.basicConfig(level=logging.DEBUG)

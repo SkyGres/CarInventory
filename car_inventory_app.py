@@ -29,7 +29,7 @@ class CarInventoryApp(tk.Tk):
 
         logging.debug("Initializing CarInventoryApp")
         self.title("Car Inventory Management")
-        self.minsize(1050, 600)  # Set a minimum size of 800x600 pixels
+        self.minsize(1200, 600)  # Set a minimum size of 1200x600 pixels
 
         # Set window icon
         try:
@@ -104,8 +104,8 @@ class CarInventoryApp(tk.Tk):
                 frame = self.frames.get(page_name, None)
                 if frame is None:
                     # Create other pages normally if not already created
-                    frame = self.create_page(page_name)  # You should define create_page method or add specific conditions
-
+                    frame = self.create_page(
+                        page_name)  # You should define create_page method or add specific conditions
             # Store the new or updated frame
             self.frames[page_name] = frame
         else:
@@ -161,7 +161,14 @@ class CarInventoryApp(tk.Tk):
                 series TEXT,
                 options TEXT,
                 key_features TEXT,
-                stock_number TEXT
+                stock_number TEXT,
+                wheel_size TEXT,
+                alloy_wheels BOOLEAN,
+                two_tone_wheels BOOLEAN,
+                chrome_wheels BOOLEAN,
+                wheels BOOLEAN,
+                custom_wheels TEXT,
+                is_wheel_key_feature BOOLEAN
             )
         ''')
         self.conn.commit()
@@ -179,7 +186,14 @@ class CarInventoryApp(tk.Tk):
                     series TEXT,
                     options TEXT,
                     key_features TEXT,
-                    stock_number TEXT
+                    stock_number TEXT,
+                    wheel_size TEXT,
+                    alloy_wheels BOOLEAN,
+                    two_tone_wheels BOOLEAN,
+                    chrome_wheels BOOLEAN,
+                    wheels BOOLEAN,
+                    custom_wheels TEXT,
+                    is_wheel_key_feature BOOLEAN
                 )
             ''')
             self.archive_conn.commit()
@@ -244,8 +258,9 @@ class CarInventoryApp(tk.Tk):
 
         try:
             self.archive_cursor.execute('''
-                INSERT INTO archived_cars (vin, make, model, model_year, series, options, key_features, stock_number)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO archived_cars (vin, make, model, model_year, series, options, key_features, stock_number, 
+                wheel_size, alloy_wheels, two_tone_wheels, chrome_wheels, wheels, custom_wheels, is_wheel_key_feature)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', car_details)
             self.archive_conn.commit()
             logging.debug(f"Archived car with VIN: {vin}")
@@ -272,3 +287,26 @@ class CarInventoryApp(tk.Tk):
         except sqlite3.Error as e:
             logging.error(f"Error fetching car with VIN {vin}: {e}")
             return None
+
+    def insert_car_into_inventory(self, car):
+        try:
+            self.cursor.execute('''
+                INSERT INTO inventory (vin, make, model, model_year, series, options, key_features, stock_number, wheel_size, alloy_wheels, two_tone_wheels, chrome_wheels, wheels, custom_wheels, is_wheel_key_feature)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''', car[1:])
+            self.conn.commit()
+            logging.debug(f"Inserted car with VIN: {car[1]} back into inventory")
+        except sqlite3.IntegrityError as e:
+            logging.error(f"Error inserting car with VIN {car[1]}: {e}")
+            raise ValueError("Car with this VIN already exists in the inventory.")
+
+    def delete_car_from_archive(self, vin):
+        try:
+            self.archive_cursor.execute('''
+                DELETE FROM archived_cars WHERE vin = ?
+            ''', (vin,))
+            self.archive_conn.commit()
+            logging.debug(f"Deleted car with VIN: {vin} from archive")
+        except sqlite3.Error as e:
+            logging.error(f"Error deleting car with VIN {vin} from archive: {e}")
+            raise ValueError(f"Failed to delete car from archive: {e}")

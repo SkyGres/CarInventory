@@ -5,19 +5,29 @@ from car_inventory_app import CarInventoryApp
 with open('car_inventory.log', 'w'):
     pass
 
-logging.basicConfig(
-    filename='car_inventory.log',  # Log file path
-    level=logging.DEBUG,  # Log all debug messages and above
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',  # Log format
-    datefmt='%Y-%m-%d %H:%M:%S'  # Date format
-)
+# Create a custom logger
+logger = logging.getLogger()
+
+# Set the minimum log level
+logger.setLevel(logging.DEBUG)
+
+# Create a file handler
+file_handler = logging.FileHandler('car_inventory.log')
+file_handler.setLevel(logging.DEBUG)
+
+# Create a formatter and set it for the handler
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+file_handler.setFormatter(formatter)
+
+# Add the file handler to the logger
+logger.addHandler(file_handler)
 
 if __name__ == "__main__":
-    logging.debug("Starting Car Inventory application.")
+    logger.debug("Starting Car Inventory application.")
     try:
         app = CarInventoryApp()
         app.mainloop()
-        logging.debug("Application main loop running.")
+        logger.debug("Application main loop running.")
     except Exception as e:
-        logging.exception("An error occurred while running the application.")
-    logging.debug("Application closed.")
+        logger.exception("An error occurred while running the application.")
+    logger.debug("Application closed.")

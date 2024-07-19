@@ -17,7 +17,8 @@
         "LUGGAGE RACK",
         "EXCELLENT TIRES",
         "NEW TIRES",
-        "REAR SPOILER"
+        "REAR SPOILER",
+        "TRAILER BRAKE PACKAGE"
     ],
     "Power": [
         "POWER WINDOWS AND LOCKS",
@@ -95,7 +96,8 @@
         "AUTO DIMMING MIRRORS",
         "HEADS UP DISPLAY",
         "GARAGE OPENER",
-        "OWNER'S MANUAL"
+        "OWNER'S MANUAL",
+        "TOUCHSCREEN RADIO W/ APPS"
     ],
     "Entertainment": [
         "REAR DVD ENTERTAINMENT SYSTEM",
@@ -107,7 +109,8 @@
         "BANG & OLUFSEN SOUND SYSTEM",
         "LEXICON SOUND SYSTEM",
         "ALPINE SOUND SYSTEM",
-        "PIONEER SOUND SYSTEM"
+        "PIONEER SOUND SYSTEM",
+        "SONY SOUND SYSTEM"
     ],
     "Safety": [
         "BLIND SPOT MONITOR",

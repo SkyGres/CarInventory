@@ -64,15 +64,24 @@ class ArchivePage(tk.Frame):
             action_frame = ttk.Frame(car_frame)
             action_frame.pack(side="right", fill="y")
 
-            # Copy Text button
-            copy_button = ttk.Button(action_frame, text="Copy Text", command=lambda c=car: self.copy_text(c))
-            copy_button.pack(fill="x", pady=5)
+            # De-Archive button
+            dearchive_button = ttk.Button(action_frame, text="De-Archive", command=lambda c=car: self.dearchive_car(c))
+            dearchive_button.pack(fill="x", pady=5)
 
     def show_car_details(self, car):
         self.controller.show_car_details(car)
 
-    def copy_text(self, car):
-        car_details = f"{car[2]} {car[3]} ({car[4]}) - {car[5]}"
-        pyperclip.copy(car_details)
-        self.notification_frame.add_notification("Car details copied to clipboard!")
-        logging.debug(f"Copied car details to clipboard: {car_details}")
+    def dearchive_car(self, car):
+        vin = car[1]
+        try:
+            # Insert car back into the inventory
+            self.controller.insert_car_into_inventory(car)
+            # Delete car from archived cars
+            self.controller.delete_car_from_archive(vin)
+            # Update the archive list
+            self.update_inventory_list()
+            self.notification_frame.add_notification("Car de-archived successfully!")
+            logging.debug(f"De-archived car with VIN: {vin}")
+        except Exception as e:
+            logging.error(f"Error de-archiving car with VIN {vin}: {e}")
+            messagebox.showerror("Error", f"Failed to de-archive car with VIN {vin}")
