@@ -54,8 +54,39 @@ class CarDetailsPage(tk.Frame):
         self.key_features_text = tk.Text(self.scrollable_frame, height=10)
         self.key_features_text.grid(row=len(fields) + 1, column=1, padx=10, pady=5, sticky="ew")
 
-        # Checkbox options with category frames
+        # Wheels section
         row = len(fields) + 2
+        ttk.Label(self.scrollable_frame, text="Wheels:").grid(row=row, column=0, padx=10, pady=5, sticky="e")
+        wheels_frame = ttk.Frame(self.scrollable_frame)
+        wheels_frame.grid(row=row, column=1, padx=10, pady=5, sticky="ew")
+
+        self.wheel_size_var = tk.StringVar()
+        self.wheel_material_var = tk.StringVar(value="None")
+        self.wheel_custom_var = tk.StringVar()
+        self.wheel_key_feature_var = tk.BooleanVar()
+
+        ttk.Label(wheels_frame, text="Size:").grid(row=0, column=0, padx=5, pady=2)
+        size_combobox = ttk.Combobox(wheels_frame, textvariable=self.wheel_size_var, values=[f"{i}\"" for i in range(14, 23)])
+        size_combobox.grid(row=0, column=1, padx=5, pady=2)
+        size_combobox.bind("<Enter>", lambda e: self.unbind_mousewheel(self.canvas))
+        size_combobox.bind("<Leave>", lambda e: self.bind_mousewheel(self.canvas))
+        size_combobox.bind("<MouseWheel>", lambda e: "break")
+
+        ttk.Label(wheels_frame, text="Material:").grid(row=1, column=0, padx=5, pady=2)
+        materials = ["None", "ALLOY WHEELS", "CHROME WHEELS", "TWO-TONE WHEELS", "WHEELS"]
+        material_frame = ttk.Frame(wheels_frame)
+        material_frame.grid(row=1, column=1, padx=5, pady=2)
+        for material in materials:
+            ttk.Radiobutton(material_frame, text=material, variable=self.wheel_material_var, value=material).pack(anchor="w")
+
+        ttk.Label(wheels_frame, text="Custom:").grid(row=2, column=0, padx=5, pady=2)
+        custom_entry = ttk.Entry(wheels_frame, textvariable=self.wheel_custom_var)
+        custom_entry.grid(row=2, column=1, padx=5, pady=2)
+
+        ttk.Checkbutton(wheels_frame, text="Key Feature", variable=self.wheel_key_feature_var, command=self.update_key_features_text).grid(row=3, column=0, columnspan=2, pady=5)
+
+        # Checkbox options with category frames
+        row += 1
         for category, options in self.car_options.items():
             category_frame = ttk.LabelFrame(self.scrollable_frame, text=category)
             category_frame.grid(row=row, column=0, columnspan=2, sticky="ew", padx=10, pady=5)
@@ -76,27 +107,6 @@ class CarDetailsPage(tk.Frame):
                     option_row += 1
             row += 1
 
-        # Wheels section
-        ttk.Label(self.scrollable_frame, text="Wheels:").grid(row=row, column=0, padx=10, pady=5, sticky="e")
-        wheels_frame = ttk.Frame(self.scrollable_frame)
-        wheels_frame.grid(row=row, column=1, padx=10, pady=5, sticky="ew")
-
-        self.wheel_size_var = tk.StringVar()
-        self.wheel_material_var = tk.StringVar()
-        self.wheel_custom_var = tk.StringVar()
-        self.wheel_key_feature_var = tk.BooleanVar()
-
-        ttk.Label(wheels_frame, text="Size:").grid(row=0, column=0, padx=5, pady=2)
-        ttk.Combobox(wheels_frame, textvariable=self.wheel_size_var, values=[f"{i}\"" for i in range(14, 23)]).grid(row=0, column=1, padx=5, pady=2)
-
-        ttk.Label(wheels_frame, text="Material:").grid(row=1, column=0, padx=5, pady=2)
-        ttk.Combobox(wheels_frame, textvariable=self.wheel_material_var, values=["None", "ALLOY WHEELS", "CHROME WHEELS", "TWO-TONE WHEELS", "WHEELS"]).grid(row=1, column=1, padx=5, pady=2)
-
-        ttk.Label(wheels_frame, text="Custom:").grid(row=2, column=0, padx=5, pady=2)
-        ttk.Entry(wheels_frame, textvariable=self.wheel_custom_var).grid(row=2, column=1, padx=5, pady=2)
-
-        ttk.Checkbutton(wheels_frame, text="Key Feature", variable=self.wheel_key_feature_var, command=self.update_key_features_text).grid(row=3, column=0, columnspan=2, pady=5)
-
         # Save Changes Button
         ttk.Button(self.scrollable_frame, text="Save Changes", command=self.save_changes).grid(row=row + 1, column=0, columnspan=2, pady=10)
 
@@ -112,25 +122,19 @@ class CarDetailsPage(tk.Frame):
         selected_key_features = [option for option, var in self.key_feature_vars.items() if var.get()]
 
         # Handle special cases for moonroofs
-        if "POWER WINDOWS, LOCKS, SEAT AND MOONROOF" in selected_key_features:
-            selected_key_features.remove("POWER WINDOWS, LOCKS, SEAT AND MOONROOF")
-            if "MOONROOF" not in selected_key_features:
-                selected_key_features.append("MOONROOF")
+        moonroof_mappings = {
+            "POWER WINDOWS, LOCKS AND SEAT": "POWER SEAT",
+            "POWER WINDOWS, LOCKS, SEAT AND MOONROOF": "MOONROOF",
+            "POWER WINDOWS, LOCKS, SEATS AND MOONROOF": "MOONROOF",
+            "POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF": "DUAL MOONROOF",
+            "POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF": "PANORAMIC MOONROOF"
+        }
 
-        if "POWER WINDOWS, LOCKS, SEATS AND MOONROOF" in selected_key_features:
-            selected_key_features.remove("POWER WINDOWS, LOCKS, SEATS AND MOONROOF")
-            if "MOONROOF" not in selected_key_features:
-                selected_key_features.append("MOONROOF")
-
-        if "POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF" in selected_key_features:
-            selected_key_features.remove("POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF")
-            if "DUAL MOONROOF" not in selected_key_features:
-                selected_key_features.append("DUAL MOONROOF")
-
-        if "POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF" in selected_key_features:
-            selected_key_features.remove("POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF")
-            if "PANORAMIC MOONROOF" not in selected_key_features:
-                selected_key_features.append("PANORAMIC MOONROOF")
+        for long_key, short_key in moonroof_mappings.items():
+            if long_key in selected_key_features:
+                selected_key_features.remove(long_key)
+                if short_key not in selected_key_features:
+                    selected_key_features.append(short_key)
 
         if self.wheel_key_feature_var.get():
             wheel_description = self.generate_wheel_description()
@@ -155,6 +159,9 @@ class CarDetailsPage(tk.Frame):
 
     def on_mousewheel(self, event):
         self.canvas.yview_scroll(int(-1 * (event.delta // 120)), "units")
+
+    def unbind_mousewheel(self, widget):
+        widget.unbind_all("<MouseWheel>")
 
     def save_changes(self):
         try:
@@ -211,8 +218,28 @@ class CarDetailsPage(tk.Frame):
 
     def update_options_checkboxes(self):
         options_text = self.car_details[6] if len(self.car_details) > 6 else ""
+        options_list = [opt.strip() for opt in options_text.split(',')]
+
+        # Special cases that require exact matching with commas
+        special_cases = [
+            "POWER WINDOWS, LOCKS AND MIRRORS",
+            "POWER WINDOWS, LOCKS AND SEAT",
+            "POWER WINDOWS, LOCKS AND SEATS",
+            "POWER WINDOWS, LOCKS, SEAT AND MOONROOF",
+            "POWER WINDOWS, LOCKS, SEATS AND MOONROOF",
+            "POWER WINDOWS, LOCKS, SEATS AND DUAL MOONROOF",
+            "POWER WINDOWS, LOCKS, SEATS AND PANORAMIC MOONROOF"
+        ]
+
+        # Clear all checkboxes first
         for option, var in self.vars.items():
-            var.set(option in options_text)
+            var.set(False)
+
+        # Set checkboxes based on options_list and special cases
+        for option in self.vars.keys():
+            # Check if the exact option is in the options list or matches a special case
+            if option in options_list or option in special_cases and option in options_text:
+                self.vars[option].set(True)
 
     def update_key_features_checkboxes(self):
         key_features_text = self.car_details[7] if len(self.car_details) > 7 else ""
