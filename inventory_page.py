@@ -6,6 +6,11 @@ import pyperclip
 import PyPDF2
 from PyPDF2.generic import NameObject, TextStringObject, BooleanObject, IndirectObject
 import webbrowser
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer, KeepTogether
+from reportlab.lib.pagesizes import LETTER
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib import colors
+from reportlab.lib.units import inch
 
 from car_details_page import CarDetailsPage
 
@@ -167,60 +172,95 @@ class InventoryPage(tk.Frame):
             messagebox.showerror("Error", "Please select at least one car to print.")
             return
 
-        skip_fields = self.skip_fields_var.get()
-
         try:
-            pdf_reader = PyPDF2.PdfReader(open("template_form.pdf", "rb"))
-            pdf_writer = PyPDF2.PdfWriter()
+            file_path = "car_inventory_report.pdf"
+            pdf = SimpleDocTemplate(
+                file_path,
+                pagesize=LETTER,
+                leftMargin=0.5 * inch,
+                rightMargin=0.2 * inch,
+                topMargin=0.2 * inch,
+                bottomMargin=0.2 * inch
+            )
 
-            field_mappings = [
-                ("car_name_first", "car_options_first"),
-                ("car_name_second", "car_options_second"),
-                ("car_name_third", "car_options_third"),
-                ("car_name_first_two", "car_options_first_two"),
-                ("car_name_second_two", "car_options_second_two"),
-                ("car_name_third_two", "car_options_third_two"),
-                ("car_name_first_three", "car_options_first_three"),
-                ("car_name_second_three", "car_options_second_three"),
-                ("car_name_third_three", "car_options_third_three")
-            ]
+            # List to hold PDF elements
+            elements = []
 
-            total_pages_needed = (len(selected_cars) + 2 + skip_fields) // 3
-            for page_num in range(total_pages_needed):
-                pdf_writer.add_page(pdf_reader.pages[page_num % len(pdf_reader.pages)])
+            # Define styles
+            styles = getSampleStyleSheet()
+            styleN = styles['Normal']
 
-            current_field_index = skip_fields
+            # Define style for car description (bigger and bold)
+            car_description_style = ParagraphStyle(
+                'CarDescription',
+                parent=styleN,
+                fontName='Helvetica-Bold',  # Bold font
+                fontSize=14,  # Larger font size
+                leading=16,  # Adjust leading to match the font size
+                spaceAfter=12  # Space after the paragraph
+            )
 
-            for i, car in enumerate(selected_cars):
-                car_name = f"{car[4]} {car[2]} {car[3]} - {car[8]} {car[5]}"
-                car_options = car[6]
-                field_name, field_options = field_mappings[current_field_index]
+            # Define spacing for options
+            options_style = ParagraphStyle(
+                'Options',
+                parent=styleN,
+                fontName='Helvetica',
+                fontSize=10,
+                leading=20,  # 1.5 line spacing
+                spaceBefore=6,  # Space before the options paragraph
+            )
 
-                page_index = current_field_index // 3
-                page = pdf_writer.pages[page_index]
+            for car in selected_cars:
+                year = car[4]
+                make = car[2]
+                model = car[3]
+                stock_number = car[8]
+                series = car[5]
+                options = car[6].replace(',', ', ')
 
-                for field_key in page["/Annots"]:
-                    field = field_key.get_object()
-                    field_name_in_page = field.get("/T")
-                    if field_name_in_page == field_name:
-                        logging.debug(f"Updating field {field_name} with value {car_name}")
-                        field.update({NameObject("/V"): TextStringObject(car_name)})
-                    elif field_name_in_page == field_options:
-                        logging.debug(f"Updating field {field_options} with value {car_options}")
-                        field.update({NameObject("/V"): TextStringObject(car_options)})
+                # Car description
+                car_description = f"{year} {make} {model} - {stock_number} {series}"
 
-                current_field_index += 1
+                # Create table structure for each car
+                data = [
+                    [
+                        "",  # Empty cell on the left
+                        [
+                            Paragraph(car_description, car_description_style),  # Use new style
+                            Spacer(1, 6),  # Space between description and options
+                            Paragraph(options, options_style)
+                        ]
+                    ]
+                ]
 
-            self.set_need_appearances_writer(pdf_writer)
+                # Create a table with 100% width
+                table = Table(data, colWidths=[1.0 * inch, 6.5 * inch])
 
-            with open("filled_form.pdf", "wb") as output_pdf:
-                pdf_writer.write(output_pdf)
+                # Style the main table
+                table.setStyle(TableStyle([
+                    ('GRID', (0, 0), (-1, -1), 1, colors.black),  # Add grid lines
+                    ('VALIGN', (0, 0), (-1, -1), 'TOP'),  # Align content to the top
+                    ('LEFTPADDING', (0, 0), (-1, -1), 6),  # Add left padding to all cells
+                    ('RIGHTPADDING', (0, 0), (-1, -1), 6),  # Add right padding to all cells
+                    ('TOPPADDING', (0, 0), (-1, -1), 10),  # Add top padding to all cells
+                    ('BOTTOMPADDING', (0, 0), (-1, -1), 10),  # Add bottom padding to all cells
+                ]))
 
-            logging.debug("Filled PDF saved to filled_form.pdf")
-            self.open_pdf_with_default_app("filled_form.pdf")
+                # Wrap the table in KeepTogether to ensure it stays on one page, if possible
+                elements.append(KeepTogether(table))
+                elements.append(Spacer(1, 12))  # Add space between each car's table
+
+            # Build the PDF
+            pdf.build(elements)
+
+            logging.debug(f"PDF generated: {file_path}")
+
+            # Open the PDF with the default application
+            self.open_pdf_with_default_app(file_path)
+
         except Exception as e:
-            logging.error(f"Failed to fill and save PDF form: {e}")
-            messagebox.showerror("Error", f"Failed to fill and save PDF form: {str(e)}")
+            logging.error(f"Failed to generate PDF report: {e}")
+            messagebox.showerror("Error", f"Failed to generate PDF report: {str(e)}")
 
     def print_guide(self, car):
         try:
